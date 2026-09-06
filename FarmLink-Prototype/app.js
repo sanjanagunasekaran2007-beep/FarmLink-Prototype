@@ -1743,14 +1743,30 @@ function runSplashScreenSequence(onComplete) {
   }
 
   const isReturningUser = sessionStorage.getItem("farmlink_splash_seen") === "true";
-  const speedMultiplier = isReturningUser ? 0.6 : 1.0;
 
+  if (isReturningUser) {
+    // Instantaneous smooth transition for returning users & reloads
+    updateSplashProgress(100);
+    updateSplashMessage("FarmLink is ready.");
+    
+    if (typeof onComplete === "function") {
+      onComplete();
+    }
+    
+    splashEl.classList.add("fade-out");
+    setTimeout(() => {
+      splashEl.classList.add("hidden");
+    }, 200);
+    return;
+  }
+
+  // Fast, crisp animation for first-time session load
   const sequence = [
-    { delay: 80 * speedMultiplier, progress: 20, message: "Checking today's market trends..." },
-    { delay: 450 * speedMultiplier, progress: 50, message: "Finding better selling opportunities..." },
-    { delay: 920 * speedMultiplier, progress: 75, message: "Connecting your farm to better buyers..." },
-    { delay: 1380 * speedMultiplier, progress: 95, message: "Preparing your market insights..." },
-    { delay: 1780 * speedMultiplier, progress: 100, message: "FarmLink is ready." }
+    { delay: 40, progress: 25, message: "Checking today's market trends..." },
+    { delay: 220, progress: 55, message: "Finding better selling opportunities..." },
+    { delay: 440, progress: 75, message: "Connecting your farm to better buyers..." },
+    { delay: 680, progress: 95, message: "Preparing your market insights..." },
+    { delay: 880, progress: 100, message: "FarmLink is ready." }
   ];
 
   sequence.forEach(step => {
@@ -1760,7 +1776,7 @@ function runSplashScreenSequence(onComplete) {
     }, step.delay);
   });
 
-  const finishDelay = 2050 * speedMultiplier;
+  const finishDelay = 1020;
   setTimeout(() => {
     sessionStorage.setItem("farmlink_splash_seen", "true");
 
@@ -1777,7 +1793,7 @@ function runSplashScreenSequence(onComplete) {
 
     setTimeout(() => {
       splashEl.classList.add("hidden");
-    }, 520);
+    }, 320);
   }, finishDelay);
 }
 
@@ -1796,19 +1812,42 @@ function renderAllViews() {
 }
 
 document.addEventListener("DOMContentLoaded", () => {
+  // Clean up any legacy or orphaned service workers from prior deploys
+  if ("serviceWorker" in navigator) {
+    navigator.serviceWorker.getRegistrations().then(regs => {
+      for (const reg of regs) reg.unregister();
+    }).catch(() => {});
+  }
+
   State.init();
+
+  // Mount and render underlying DOM immediately so the app is ready in background
+  if (State.isLoggedIn) {
+    const authEl = document.getElementById("view-auth");
+    const shellEl = document.getElementById("app-shell");
+    if (authEl) {
+      authEl.classList.remove("active");
+      authEl.style.display = "none";
+    }
+    if (shellEl) {
+      shellEl.style.display = "flex";
+    }
+    renderAllViews();
+  } else {
+    const authEl = document.getElementById("view-auth");
+    const shellEl = document.getElementById("app-shell");
+    if (authEl) {
+      authEl.style.display = "flex";
+      authEl.classList.add("active");
+    }
+    if (shellEl) {
+      shellEl.style.display = "none";
+    }
+  }
 
   runSplashScreenSequence(() => {
     if (State.isLoggedIn) {
-      document.getElementById("view-auth").classList.remove("active");
-      document.getElementById("view-auth").style.display = "none";
-      document.getElementById("app-shell").style.display = "flex";
-      renderAllViews();
       navigate("dashboard");
-    } else {
-      document.getElementById("view-auth").style.display = "flex";
-      document.getElementById("view-auth").classList.add("active");
-      document.getElementById("app-shell").style.display = "none";
     }
   });
 });
