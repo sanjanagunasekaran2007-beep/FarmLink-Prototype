@@ -1,0 +1,1549 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>FarmLink — Technology That Helps Farmers Make Better Decisions</title>
+  <meta name="description" content="A warm, trustworthy agricultural marketplace connecting farmers with buyers, price intelligence, verified escrow, and logistics.">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+</head>
+<body>
+
+  <!-- ==========================================================================
+       AGRICULTURE-THEMED MOBILE SPLASH / LOADING SCREEN
+       ========================================================================== -->
+  <div id="app-splash-screen" class="app-splash-screen" aria-live="polite" aria-label="Loading FarmLink">
+    <div class="splash-ambient-glow"></div>
+
+    <!-- Top Badge -->
+    <div class="splash-top-badge">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M12 2v2"/><path d="M12 20v2"/><path d="m4.93 4.93 1.41 1.41"/><path d="m17.66 17.66 1.41 1.41"/><path d="M2 12h2"/><path d="M20 12h2"/><path d="m6.34 17.66-1.41 1.41"/><path d="m19.07 4.93-1.41 1.41"/>
+      </svg>
+      <span>Kisan Mandi Network</span>
+    </div>
+
+    <!-- Center Content -->
+    <div class="splash-center-content">
+      <div class="splash-brand-group">
+        <div class="splash-logo-circle">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 2a10 10 0 0 1 10 10c0 5.523-4.477 10-10 10S2 17.523 2 12A10 10 0 0 1 12 2z"/>
+            <path d="M12 6v6l4 2"/>
+            <path d="M7 16c2-2 5-2 7 0"/>
+          </svg>
+        </div>
+        <h1 class="splash-title">FarmLink</h1>
+        <p class="splash-tagline">Intelligent Agricultural Marketplace</p>
+      </div>
+
+      <!-- Agricultural Growing Sprout Visual -->
+      <div class="splash-visual-container">
+        <svg class="splash-agri-svg" viewBox="0 0 200 140" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <radialGradient id="sunHalo" cx="50%" cy="50%" r="50%">
+              <stop offset="0%" stop-color="#F7E8BE" stop-opacity="0.95"/>
+              <stop offset="60%" stop-color="#F7E8BE" stop-opacity="0.35"/>
+              <stop offset="100%" stop-color="#F7E8BE" stop-opacity="0"/>
+            </radialGradient>
+            <linearGradient id="stemGrad" x1="0%" y1="100%" x2="0%" y2="0%">
+              <stop offset="0%" stop-color="#1F5135"/>
+              <stop offset="100%" stop-color="#4F8F5B"/>
+            </linearGradient>
+            <linearGradient id="leafGradLeft" x1="100%" y1="100%" x2="0%" y2="0%">
+              <stop offset="0%" stop-color="#1F5135"/>
+              <stop offset="100%" stop-color="#4F8F5B"/>
+            </linearGradient>
+            <linearGradient id="leafGradRight" x1="0%" y1="100%" x2="100%" y2="0%">
+              <stop offset="0%" stop-color="#4F8F5B"/>
+              <stop offset="100%" stop-color="#73A96B"/>
+            </linearGradient>
+          </defs>
+
+          <!-- Sun & Glow -->
+          <g class="agri-sun">
+            <circle cx="155" cy="35" r="24" fill="url(#sunHalo)" />
+            <circle cx="155" cy="35" r="12" fill="#FAF0D6" />
+            <circle cx="155" cy="35" r="7" fill="#D9A441" />
+          </g>
+
+          <!-- Field Rolling Lines -->
+          <path class="agri-field-line" d="M12 116 Q 65 104 125 114 T 190 110" />
+          <path class="agri-field-line" d="M0 123 Q 75 110 138 120 T 200 116" stroke="#D9E1D8" />
+
+          <!-- Soil Mound Layer -->
+          <path d="M45 125 Q 100 118 155 125 L 155 138 L 45 138 Z" fill="#8D5B00" opacity="0.12" />
+          <path d="M55 124 Q 100 120 145 124" stroke="#8D5B00" stroke-width="2.2" stroke-linecap="round" opacity="0.45" />
+
+          <!-- Seed -->
+          <ellipse class="agri-seed" cx="100" cy="122" rx="4.5" ry="3" fill="#8D5B00" transform="rotate(-12 100 122)" />
+
+          <!-- Growing Sprout Stem -->
+          <path class="agri-stem" d="M100 122 C 100 98, 98 76, 100 52" stroke="url(#stemGrad)" stroke-width="3.5" stroke-linecap="round" />
+
+          <!-- Left Leaf Unfurling -->
+          <g class="agri-leaf-left">
+            <path d="M100 78 C 74 74, 66 58, 70 50 C 84 52, 98 67, 100 78 Z" fill="url(#leafGradLeft)" />
+            <path d="M100 78 C 86 68, 76 56, 70 50" stroke="#EEF5EC" stroke-width="0.8" opacity="0.7" stroke-linecap="round" />
+          </g>
+
+          <!-- Right Leaf Unfurling -->
+          <g class="agri-leaf-right">
+            <path d="M100 66 C 126 62, 134 46, 130 38 C 116 40, 102 55, 100 66 Z" fill="url(#leafGradRight)" />
+            <path d="M100 66 C 114 56, 124 44, 130 38" stroke="#EEF5EC" stroke-width="0.8" opacity="0.8" stroke-linecap="round" />
+          </g>
+
+          <!-- Top Bud -->
+          <g class="agri-leaf-bud">
+            <path d="M100 52 C 95 43, 97 35, 100 30 C 103 35, 105 43, 100 52 Z" fill="#73A96B" />
+          </g>
+        </svg>
+      </div>
+
+      <!-- Loading Indicator & Rotating Messages -->
+      <div class="splash-loading-box">
+        <div class="splash-message-container">
+          <div class="splash-message" id="splash-status-message">Checking today's market trends...</div>
+        </div>
+
+        <div class="splash-progress-track">
+          <div class="splash-progress-bar" id="splash-progress-fill"></div>
+        </div>
+
+        <div class="splash-progress-meta">
+          <span>Preparing your farm dashboard</span>
+          <span class="splash-progress-percent" id="splash-progress-text">0%</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Splash Footer -->
+    <div class="splash-footer">
+      <span>🌱</span>
+      <span>Direct Farmgate • Fair APMC Prices • Secure Escrow</span>
+    </div>
+  </div>
+
+  <!-- ==========================================================================
+       AUTHENTICATION VIEW (Warm Cream Background + Soft Card)
+       ========================================================================== -->
+  <div id="view-auth" class="app-view" style="display: none;">
+    <div class="auth-card-container">
+      <div class="auth-brand">
+        <div class="logo-wrapper" style="justify-content: center; margin-bottom: 12px;">
+          <div class="logo-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 2a10 10 0 0 1 10 10c0 5.523-4.477 10-10 10S2 17.523 2 12A10 10 0 0 1 12 2z"/>
+              <path d="M12 6v6l4 2"/>
+              <path d="M7 16c2-2 5-2 7 0"/>
+            </svg>
+          </div>
+          <div class="logo-text-box">
+            <span class="logo-title">FarmLink</span>
+          </div>
+        </div>
+        <p style="font-size: 0.9rem; color: var(--text-secondary); margin-top: 2px;">Technology that helps farmers make better decisions.</p>
+        <span class="badge badge-gold" style="margin-top: 10px;">DEMO PROTOTYPE</span>
+      </div>
+
+      <!-- Auth Tabs -->
+      <div class="auth-tabs">
+        <button id="tab-login" class="auth-tab-btn active" onclick="switchAuthTab('login')">Log In</button>
+        <button id="tab-register" class="auth-tab-btn" onclick="switchAuthTab('register')">Create Account</button>
+      </div>
+
+      <!-- Login Form -->
+      <div id="auth-login-section">
+        <div class="demo-credentials-pill">
+          <div>
+            <strong style="color: var(--primary-forest); font-size: 0.78rem; text-transform: uppercase; letter-spacing:0.04em;">Demo Login</strong>
+            <div style="font-size: 0.84rem; color: var(--text-secondary); margin-top: 2px;">
+              Mobile: <span style="font-family: monospace; color: var(--text-main); font-weight:700;">9876543210</span> | Pass: <span style="font-family: monospace; color: var(--text-main); font-weight:700;">123456</span>
+            </div>
+          </div>
+          <button class="btn btn-sm btn-secondary" onclick="fillDemoCredentials()">Auto Fill</button>
+        </div>
+
+        <form id="form-login" onsubmit="handleLoginSubmit(event)">
+          <div class="form-group">
+            <label class="form-label" for="login-mobile">Mobile Number / Email</label>
+            <input type="text" id="login-mobile" class="form-control" placeholder="Enter 9876543210 or email" required>
+          </div>
+          <div class="form-group">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 6px;">
+              <label class="form-label" for="login-password" style="margin: 0;">Password</label>
+              <a href="javascript:void(0)" onclick="showToast('Password reset link sent to demo contact.', 'info')" style="font-size: 0.8rem; color: var(--primary-green); font-weight:700;">Forgot?</a>
+            </div>
+            <input type="password" id="login-password" class="form-control" placeholder="Enter password (123456)" required>
+          </div>
+
+          <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 20px;">
+            <label style="display: flex; align-items: center; gap: 8px; font-size: 0.84rem; color: var(--text-secondary); cursor: pointer;">
+              <input type="checkbox" id="login-remember" checked style="accent-color: var(--primary-green); width:16px; height:16px;">
+              Remember me
+            </label>
+          </div>
+
+          <button type="submit" class="btn btn-primary btn-block btn-lg" style="margin-bottom: 12px;">
+            Log In to FarmLink
+          </button>
+          <button type="button" class="btn btn-secondary btn-block" onclick="handleDemoQuickLogin()">
+            ⚡ Instant Demo Access
+          </button>
+        </form>
+      </div>
+
+      <!-- Register Form -->
+      <div id="auth-register-section" style="display: none;">
+        <form id="form-register" onsubmit="handleRegisterSubmit(event)">
+          <div class="form-row-2">
+            <div class="form-group">
+              <label class="form-label" for="reg-name">Full Name</label>
+              <input type="text" id="reg-name" class="form-control" placeholder="e.g. Sanjana Devi" required>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="reg-mobile">Mobile Number</label>
+              <input type="tel" id="reg-mobile" class="form-control" placeholder="10-digit mobile" required>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="reg-email">Email Address</label>
+            <input type="email" id="reg-email" class="form-control" placeholder="name@example.com">
+          </div>
+
+          <div class="form-row-2">
+            <div class="form-group">
+              <label class="form-label" for="reg-state">State</label>
+              <select id="reg-state" class="form-control" required>
+                <option value="Maharashtra">Maharashtra</option>
+                <option value="Tamil Nadu" selected>Tamil Nadu</option>
+                <option value="Karnataka">Karnataka</option>
+                <option value="Andhra Pradesh">Andhra Pradesh</option>
+                <option value="Madhya Pradesh">Madhya Pradesh</option>
+                <option value="Punjab">Punjab</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="reg-district">District</label>
+              <input type="text" id="reg-district" class="form-control" placeholder="e.g. Dindigul / Nashik" required>
+            </div>
+          </div>
+
+          <div class="form-row-2">
+            <div class="form-group">
+              <label class="form-label" for="reg-village">Village</label>
+              <input type="text" id="reg-village" class="form-control" placeholder="Village name" required>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="reg-crop">Primary Crop</label>
+              <select id="reg-crop" class="form-control" required>
+                <option value="Tomato" selected>Tomato</option>
+                <option value="Onion">Onion</option>
+                <option value="Wheat">Wheat</option>
+                <option value="Cotton">Cotton</option>
+                <option value="Potato">Potato</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-row-2">
+            <div class="form-group">
+              <label class="form-label" for="reg-farmsize">Farm Size (Acres)</label>
+              <input type="number" step="0.5" id="reg-farmsize" class="form-control" placeholder="e.g. 4.5" required>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="reg-lang">Preferred Language</label>
+              <select id="reg-lang" class="form-control">
+                <option value="en">English</option>
+                <option value="ta">தமிழ் (Tamil)</option>
+                <option value="hi">हिन्दी (Hindi)</option>
+                <option value="te">తెలుగు (Telugu)</option>
+                <option value="ml">മലയാളം (Malayalam)</option>
+                <option value="kn">ಕನ್ನಡ (Kannada)</option>
+              </select>
+            </div>
+          </div>
+
+          <button type="submit" class="btn btn-primary btn-block btn-lg" style="margin-top: 10px;">
+            Complete Registration
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==========================================================================
+       MAIN APPLICATION SHELL (DESKTOP & MOBILE)
+       ========================================================================== -->
+  <div id="app-shell" style="display: flex; width: 100%;">
+    
+    <!-- --- Left Sidebar --- -->
+    <aside class="app-sidebar" id="app-sidebar">
+      <div class="sidebar-header">
+        <div class="logo-wrapper">
+          <div class="logo-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 2a10 10 0 0 1 10 10c0 5.523-4.477 10-10 10S2 17.523 2 12A10 10 0 0 1 12 2z"/>
+              <path d="M12 6v6l4 2"/>
+              <path d="M7 16c2-2 5-2 7 0"/>
+            </svg>
+          </div>
+          <div class="logo-text-box">
+            <span class="logo-title">FarmLink</span>
+            <span class="logo-tagline">Farmer Marketplace</span>
+          </div>
+        </div>
+      </div>
+
+      <nav class="sidebar-nav">
+        <div class="nav-section-title" data-i18n="marketplace_ops">Marketplace</div>
+        
+        <a href="javascript:void(0)" class="nav-link active" data-view="dashboard" onclick="navigate('dashboard')">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect width="7" height="9" x="3" y="3" rx="1"/><rect width="7" height="5" x="14" y="3" rx="1"/><rect width="7" height="9" x="14" y="12" rx="1"/><rect width="7" height="5" x="3" y="16" rx="1"/></svg>
+          <span data-i18n="nav_dashboard">Dashboard</span>
+        </a>
+
+        <a href="javascript:void(0)" class="nav-link" data-view="market" onclick="navigate('market')">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="22 7 13.5 15.5 8.5 10.5 2 17"/><polyline points="16 7 22 7 22 13"/></svg>
+          <span data-i18n="nav_market">Market Intelligence</span>
+        </a>
+
+        <a href="javascript:void(0)" class="nav-link" data-view="lots" onclick="navigate('lots')">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m7.5 4.27 9 5.15"/><path d="M21 8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16Z"/><path d="m3.3 7 8.7 5 8.7-5"/><path d="M12 22V12"/></svg>
+          <span data-i18n="nav_lots">My Lots</span>
+          <span class="nav-badge" id="sidebar-lots-count">1</span>
+        </a>
+
+        <a href="javascript:void(0)" class="nav-link" data-view="buyers" onclick="navigate('buyers')">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+          <span data-i18n="nav_buyers">Find Buyers</span>
+        </a>
+
+        <a href="javascript:void(0)" class="nav-link" data-view="offers" onclick="navigate('offers')">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m14 2-8 8 3 3 8-8V2h-3z"/><path d="M4 14l6 6"/><path d="m15 5 4 4"/></svg>
+          <span data-i18n="nav_offers">Offers</span>
+          <span class="nav-badge" id="sidebar-offers-count">1</span>
+        </a>
+
+        <div class="nav-section-title" data-i18n="fulfillment">Fulfillment & Operations</div>
+
+        <a href="javascript:void(0)" class="nav-link" data-view="logistics" onclick="navigate('logistics')">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect width="16" height="13" x="1" y="5" rx="2"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
+          <span data-i18n="nav_logistics">Logistics</span>
+        </a>
+
+        <a href="javascript:void(0)" class="nav-link" data-view="payments" onclick="navigate('payments')">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect width="20" height="14" x="2" y="5" rx="2"/><line x1="2" x2="22" y1="10" y2="10"/></svg>
+          <span data-i18n="nav_payments">Payments</span>
+        </a>
+
+        <a href="javascript:void(0)" class="nav-link" data-view="grievances" onclick="navigate('grievances')">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10"/><path d="M12 8v4"/><path d="M12 16h.01"/></svg>
+          <span data-i18n="nav_grievances">Grievances</span>
+        </a>
+
+        <a href="javascript:void(0)" class="nav-link" data-view="fpo" onclick="navigate('fpo')">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+          <span data-i18n="nav_fpo">FPO</span>
+        </a>
+      </nav>
+
+      <div class="sidebar-footer">
+        <a href="javascript:void(0)" class="nav-link" data-view="profile" onclick="navigate('profile')">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+          <span data-i18n="nav_profile">Profile</span>
+        </a>
+        <button class="nav-link" onclick="handleLogout()" style="color: var(--danger-red); width: 100%;">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/><polyline points="16 17 21 12 16 7"/><line x1="21" x2="9" y1="12" y2="12"/></svg>
+          <span data-i18n="nav_logout">Logout</span>
+        </button>
+      </div>
+    </aside>
+
+    <!-- --- Main Content Area --- -->
+    <main class="app-main">
+      
+      <!-- Top Header -->
+      <header class="app-header">
+        <div class="header-left">
+          <button class="mobile-menu-btn" onclick="toggleSidebar()">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="4" x2="20" y1="12" y2="12"/><line x1="4" x2="20" y1="6" y2="6"/><line x1="4" x2="20" y1="18" y2="18"/></svg>
+          </button>
+          <div class="search-box">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+            <input type="text" id="global-search-input" placeholder="Search crops, buyers, lot IDs, mandi prices..." onkeyup="handleGlobalSearch(event)">
+          </div>
+        </div>
+
+        <div class="header-right">
+          <!-- Location Pill -->
+          <div class="header-location-pill">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+            <span id="header-location-text">Nashik, Maharashtra</span>
+          </div>
+
+          <!-- Notification Bell -->
+          <button class="icon-btn" id="btn-notifications-toggle" onclick="toggleNotificationsDrawer()" title="Notifications">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 8a6 6 0 0 1 12 0c0 7 3 9 3 9H3s3-2 3-9"/><path d="M10.3 21a1.94 1.94 0 0 0 3.4 0"/></svg>
+            <span class="notification-count" id="header-unread-dot"></span>
+          </button>
+
+          <!-- Language Selector -->
+          <div class="language-dropdown">
+            <button class="lang-select-btn" onclick="toggleLanguageMenu()" id="btn-current-lang">
+              <span>🌐</span> <span id="current-lang-code">EN</span>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:13px;height:13px;"><path d="m6 9 6 6 6-6"/></svg>
+            </button>
+            <div class="lang-menu" id="lang-menu-dropdown">
+              <button class="lang-item active" onclick="setLanguage('en')">English <span>EN</span></button>
+              <button class="lang-item" onclick="setLanguage('ta')">தமிழ் <span>TA</span></button>
+              <button class="lang-item" onclick="setLanguage('hi')">हिन्दी <span>HI</span></button>
+              <button class="lang-item" onclick="setLanguage('te')">తెలుగు <span>TE</span></button>
+              <button class="lang-item" onclick="setLanguage('ml')">മലയാളം <span>ML</span></button>
+              <button class="lang-item" onclick="setLanguage('kn')">ಕನ್ನಡ <span>KN</span></button>
+            </div>
+          </div>
+
+          <!-- Theme Toggle -->
+          <button class="icon-btn" id="btn-theme-toggle" onclick="toggleTheme()" title="Toggle Theme">
+            <svg id="icon-theme-dark" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="4"/><path d="M12 2v2"/><path d="M12 20v2"/><path d="m4.93 4.93 1.41 1.41"/><path d="m17.66 17.66 1.41 1.41"/><path d="M2 12h2"/><path d="M20 12h2"/><path d="m6.34 17.66-1.41 1.41"/><path d="m19.07 4.93-1.41 1.41"/></svg>
+            <svg id="icon-theme-light" style="display:none;" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></svg>
+          </button>
+
+          <!-- User Chip -->
+          <div class="header-user-chip" onclick="navigate('profile')">
+            <div class="user-avatar" id="header-user-avatar">S</div>
+            <div class="user-name-box">
+              <span class="user-name" id="header-user-name">Sanjana</span>
+              <span class="user-role" data-i18n="farmer_badge">Farmer</span>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <!-- Main Content Container -->
+      <div class="content-wrapper">
+        
+        <!-- ====================================================================
+             VIEW: DASHBOARD (AI Command Center + Attention Items)
+             ==================================================================== -->
+        <section id="view-dashboard" class="app-view">
+          <div class="page-header">
+            <div>
+              <h1 class="page-title">
+                <span id="dashboard-greeting">Good afternoon, Sanjana</span> 👋
+              </h1>
+              <p class="page-subtitle">Here is your live AI market overview and crop opportunities today.</p>
+            </div>
+            <div style="display: flex; gap: 10px; flex-wrap: wrap;">
+              <button class="btn btn-secondary" onclick="navigate('market')">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:16px;height:16px;"><polyline points="22 7 13.5 15.5 8.5 10.5 2 17"/><polyline points="16 7 22 7 22 13"/></svg>
+                <span data-i18n="explore_markets">Explore Markets</span>
+              </button>
+              <button class="btn btn-primary" onclick="openCreateLotModal()">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:16px;height:16px;"><line x1="12" x2="12" y1="5" y2="19"/><line x1="5" x2="19" y1="12" y2="12"/></svg>
+                <span data-i18n="publish_new_lot">Publish New Lot</span>
+              </button>
+            </div>
+          </div>
+
+          <!-- Section 1: WHAT NEEDS YOUR ATTENTION (TINTED CARDS) -->
+          <div class="section-label">Action Items</div>
+          <div class="section-title">What needs your attention</div>
+
+          <div class="attention-grid">
+            <!-- 1. AI Recommendation -> Lavender/AI -->
+            <div class="attention-card card-ai-attention" onclick="openAIAnalysisModal()">
+              <div>
+                <div class="attention-card-top">
+                  <span class="badge badge-lavender">✨ AI Advisory</span>
+                  <div class="attention-icon-box lavender">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4"/><path d="M12 8h.01"/></svg>
+                  </div>
+                </div>
+                <div class="attention-card-title">Negotiate Tomato Deal</div>
+                <div class="attention-card-desc">FreshFoods offered ₹30/kg. Counter at ₹32/kg for +₹1,000 net upside.</div>
+              </div>
+              <div class="attention-card-action">View Recommendation →</div>
+            </div>
+
+            <!-- 2. Buyer Offer -> Warm Amber/Gold -->
+            <div class="attention-card card-offer-attention" onclick="navigate('offers')">
+              <div>
+                <div class="attention-card-top">
+                  <span class="badge badge-gold">New Offer</span>
+                  <div class="attention-icon-box gold">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m14 2-8 8 3 3 8-8V2h-3z"/></svg>
+                  </div>
+                </div>
+                <div class="attention-card-title">FreshFoods: ₹15,000</div>
+                <div class="attention-card-desc">500 kg Tomato • 98% verified buyer reliability match.</div>
+              </div>
+              <div class="attention-card-action">Review & Respond →</div>
+            </div>
+
+            <!-- 3. Logistics Update -> Market Blue -->
+            <div class="attention-card card-logistics-attention" onclick="navigate('logistics')">
+              <div>
+                <div class="attention-card-top">
+                  <span class="badge badge-blue">Logistics</span>
+                  <div class="attention-icon-box blue">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect width="16" height="13" x="1" y="5" rx="2"/><polygon points="16 8 20 8 23 11 23 16 16 16 8"/></svg>
+                  </div>
+                </div>
+                <div class="attention-card-title">Shipment: <span id="dash-stat-delivery">ASSIGNED</span></div>
+                <div class="attention-card-desc">AgriMove assigned • ETA: 07 Sept, 04:30 PM.</div>
+              </div>
+              <div class="attention-card-action">Track Vehicle →</div>
+            </div>
+
+            <!-- 4. Payment Escrow -> Forest Green/Sage -->
+            <div class="attention-card card-payment-attention" onclick="navigate('payments')">
+              <div>
+                <div class="attention-card-top">
+                  <span class="badge badge-green">Escrow Protected</span>
+                  <div class="attention-icon-box green">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect width="20" height="14" x="2" y="5" rx="2"/><line x1="2" x2="22" y1="10" y2="10"/></svg>
+                  </div>
+                </div>
+                <div class="attention-card-title">₹15,000 Protected</div>
+                <div class="attention-card-desc" id="dash-payment-desc">Buyer funds deposited in secure bank escrow.</div>
+              </div>
+              <div class="attention-card-action">View Payout →</div>
+            </div>
+          </div>
+
+          <!-- Section 2: AI SELLING ADVICE (Hero Command Center) -->
+          <div class="ai-advice-card">
+            <div class="ai-advice-header">
+              <span class="ai-advice-tag">✨ FarmLink AI Market Intelligence</span>
+              <span class="badge badge-gold">93% Confidence</span>
+            </div>
+            
+            <h2 class="ai-advice-title">Tomato prices are moving up. Consider negotiating before selling.</h2>
+            <p class="ai-advice-body">
+              Market arrivals in Pune and Nashik are 18% lower this week. FreshFoods has sent an offer of <strong>₹30/kg</strong>, but wholesale terminal demand allows you to counter-offer around <strong>₹31–₹32/kg</strong> with a 91% acceptance probability.
+            </p>
+
+            <div class="ai-metrics-row">
+              <div class="ai-metric-item">
+                <span class="ai-metric-label">Current Offer</span>
+                <span class="ai-metric-value">₹30<span style="font-size:0.85rem;font-weight:600;opacity:0.8;">/kg</span></span>
+              </div>
+              <div class="ai-metric-item">
+                <span class="ai-metric-label">Market Modal</span>
+                <span class="ai-metric-value">₹28<span style="font-size:0.85rem;font-weight:600;opacity:0.8;">/kg</span></span>
+              </div>
+              <div class="ai-metric-item">
+                <span class="ai-metric-label">Suggested Target</span>
+                <span class="ai-metric-value" style="color:#FAF0D6;">₹31–₹32<span style="font-size:0.85rem;font-weight:600;opacity:0.8;">/kg</span></span>
+              </div>
+              <div class="ai-metric-item">
+                <span class="ai-metric-label">Expected Net Upside</span>
+                <span class="ai-metric-value" style="color:#FAF0D6;">+₹1,000</span>
+              </div>
+            </div>
+
+            <div class="ai-advice-actions">
+              <button class="btn btn-primary" onclick="openAIAnalysisModal()">See why</button>
+              <button class="btn btn-secondary" onclick="handleDashboardNegotiate()">Negotiate (₹32/kg)</button>
+              <button class="btn btn-outline" onclick="navigate('buyers')">View Other Buyers</button>
+            </div>
+          </div>
+
+          <!-- Section 3: MARKET TODAY (INDIVIDUALLY TINTED CROP CARDS) -->
+          <div class="section-label">Price Discovery</div>
+          <div class="section-title">
+            <span>Market Today</span>
+            <button class="btn btn-sm btn-ghost" onclick="navigate('market')">View Full Mandi Trends →</button>
+          </div>
+
+          <div class="market-today-grid">
+            <!-- Tomato -> Soft Rose/Pink -->
+            <div class="market-item-card market-card-tomato" onclick="selectCropAndNavigate('Tomato')">
+              <div class="market-item-top">
+                <span class="market-item-name">Tomato</span>
+                <span class="badge badge-green" style="font-size:0.68rem;">High Demand</span>
+              </div>
+              <div class="market-item-price">₹28<span style="font-size:0.8rem;font-weight:600;color:var(--text-muted);">/kg</span></div>
+              <div class="market-item-change up">↑ 8.2% this week</div>
+            </div>
+
+            <!-- Onion -> Soft Purple/Lilac -->
+            <div class="market-item-card market-card-onion" onclick="selectCropAndNavigate('Onion')">
+              <div class="market-item-top">
+                <span class="market-item-name">Onion</span>
+                <span class="badge badge-gold" style="font-size:0.68rem;">Rising</span>
+              </div>
+              <div class="market-item-price">₹34<span style="font-size:0.8rem;font-weight:600;color:var(--text-muted);">/kg</span></div>
+              <div class="market-item-change up">↑ 5.7% this week</div>
+            </div>
+
+            <!-- Wheat -> Soft Golden -->
+            <div class="market-item-card market-card-wheat" onclick="selectCropAndNavigate('Wheat')">
+              <div class="market-item-top">
+                <span class="market-item-name">Wheat</span>
+                <span class="badge badge-blue" style="font-size:0.68rem;">Stable</span>
+              </div>
+              <div class="market-item-price">₹27<span style="font-size:0.8rem;font-weight:600;color:var(--text-muted);">/kg</span></div>
+              <div class="market-item-change down">↓ 1.8% this week</div>
+            </div>
+
+            <!-- Cotton -> Soft Blue -->
+            <div class="market-item-card market-card-cotton" onclick="selectCropAndNavigate('Cotton')">
+              <div class="market-item-top">
+                <span class="market-item-name">Cotton</span>
+                <span class="badge badge-beige" style="font-size:0.68rem;">Active</span>
+              </div>
+              <div class="market-item-price">₹72<span style="font-size:0.8rem;font-weight:600;color:var(--text-muted);">/kg</span></div>
+              <div class="market-item-change up">↑ 3.4% this week</div>
+            </div>
+
+            <!-- Potato -> Soft Earthy Beige -->
+            <div class="market-item-card market-card-potato" onclick="selectCropAndNavigate('Potato')">
+              <div class="market-item-top">
+                <span class="market-item-name">Potato</span>
+                <span class="badge badge-peach" style="font-size:0.68rem;">Steady</span>
+              </div>
+              <div class="market-item-price">₹19<span style="font-size:0.8rem;font-weight:600;color:var(--text-muted);">/kg</span></div>
+              <div class="market-item-change down">↓ 0.9% this week</div>
+            </div>
+          </div>
+
+          <!-- Section 4: SUMMARY PREVIEWS -->
+          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 18px;">
+            <div class="card">
+              <div class="card-header">
+                <h3 class="card-title">My Harvest Produce</h3>
+                <button class="btn btn-sm btn-secondary" onclick="navigate('lots')">View All Lots</button>
+              </div>
+              <div id="dash-lots-preview"></div>
+            </div>
+
+            <div class="card">
+              <div class="card-header">
+                <h3 class="card-title">Buyer Offers & Deals</h3>
+                <button class="btn btn-sm btn-secondary" onclick="navigate('offers')">Manage Deals</button>
+              </div>
+              <div id="dash-offers-preview"></div>
+            </div>
+          </div>
+        </section>
+
+        <!-- ====================================================================
+             VIEW: MARKET INTELLIGENCE
+             ==================================================================== -->
+        <section id="view-market" class="app-view">
+          <div class="page-header">
+            <div>
+              <h1 class="page-title">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:24px;height:24px;color:var(--primary-forest);"><polyline points="22 7 13.5 15.5 8.5 10.5 2 17"/><polyline points="16 7 22 7 22 13"/></svg>
+                Market Intelligence & Mandi Trends
+              </h1>
+              <p class="page-subtitle">Real-time APMC Mandi prices, arrival volume, and selling opportunities.</p>
+            </div>
+            <div class="header-location-pill">
+              <span>Cluster: Western Agri Belt</span>
+            </div>
+          </div>
+
+          <!-- Crop Selector Pill Cards -->
+          <div style="display: flex; gap: 10px; overflow-x: auto; padding-bottom: 6px; margin-bottom: 20px;" id="market-crop-selector"></div>
+
+          <!-- 7-Day Clean Price Chart -->
+          <div class="market-chart-box">
+            <div class="card-header" style="margin-bottom: 8px;">
+              <div>
+                <h3 style="font-size: 1.15rem; font-weight: 800; color:var(--primary-forest);" id="chart-selected-crop-title">Tomato price trend (7 days)</h3>
+                <div style="font-size: 0.84rem; color: var(--text-secondary);" id="chart-selected-crop-subtitle">Data aggregated across Nashik, Pune & Mumbai mandis</div>
+              </div>
+              <div style="display:flex; gap:8px;">
+                <span class="badge badge-green" id="chart-growth-badge">↑ 8.2% this week</span>
+                <span class="badge badge-gold">High Demand</span>
+              </div>
+            </div>
+
+            <div class="chart-svg-wrapper">
+              <svg id="market-price-svg" viewBox="0 0 800 220" preserveAspectRatio="none"></svg>
+              <div class="chart-tooltip" id="chart-tooltip"></div>
+            </div>
+
+            <div style="display: flex; justify-content: space-between; font-size: 0.78rem; color: var(--text-muted); border-top: 1px solid var(--border-color); padding-top: 12px;" id="chart-x-labels">
+              <span>31 Aug</span>
+              <span>01 Sep</span>
+              <span>02 Sep</span>
+              <span>03 Sep</span>
+              <span>04 Sep</span>
+              <span>05 Sep</span>
+              <span>Today (06 Sep)</span>
+            </div>
+          </div>
+
+          <!-- Mandi Comparison Table -->
+          <div class="card">
+            <div class="card-header">
+              <h3 class="card-title">Mandi Price Comparison & Profit Potential</h3>
+              <button class="btn btn-sm btn-primary" onclick="openCreateLotModal()">Publish Lot for Highest Mandi</button>
+            </div>
+            <div class="table-responsive">
+              <table class="custom-table" id="mandi-comparison-table">
+                <thead>
+                  <tr>
+                    <th>Mandi Name</th>
+                    <th>Distance</th>
+                    <th>Modal Price</th>
+                    <th>Max Price</th>
+                    <th>Arrivals</th>
+                    <th>Net Profit Potential</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody id="mandi-table-body"></tbody>
+              </table>
+            </div>
+          </div>
+        </section>
+
+        <!-- ====================================================================
+             VIEW: MY LOTS
+             ==================================================================== -->
+        <section id="view-lots" class="app-view">
+          <div class="page-header">
+            <div>
+              <h1 class="page-title">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:24px;height:24px;color:var(--primary-forest);"><path d="m7.5 4.27 9 5.15"/><path d="M21 8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16Z"/></svg>
+                My Crop Lots
+              </h1>
+              <p class="page-subtitle">Track your published produce, quality assessments, and live buyer interest.</p>
+            </div>
+            <button class="btn btn-primary" onclick="openCreateLotModal()">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:16px;height:16px;"><line x1="12" x2="12" y1="5" y2="19"/><line x1="5" x2="19" y1="12" y2="12"/></svg>
+              Create New Lot
+            </button>
+          </div>
+
+          <!-- Filter Pills -->
+          <div style="display: flex; gap: 8px; margin-bottom: 18px; overflow-x: auto; padding-bottom: 4px;">
+            <button class="btn btn-sm btn-secondary active-filter" onclick="filterLots('all', this)">All Lots (<span id="count-lots-all">1</span>)</button>
+            <button class="btn btn-sm btn-outline" onclick="filterLots('NEGOTIATING', this)">Negotiating</button>
+            <button class="btn btn-sm btn-outline" onclick="filterLots('ACTIVE', this)">Active / Listed</button>
+            <button class="btn btn-sm btn-outline" onclick="filterLots('SOLD', this)">Sold</button>
+          </div>
+
+          <!-- Desktop Table & Mobile Cards -->
+          <div class="card" style="padding: 0; overflow: hidden;">
+            <div class="table-responsive">
+              <table class="custom-table" id="lots-table-desktop">
+                <thead>
+                  <tr>
+                    <th>Lot ID</th>
+                    <th>Crop & Variety</th>
+                    <th>Quantity</th>
+                    <th>Grade</th>
+                    <th>Expected Price</th>
+                    <th>Status</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody id="lots-table-body"></tbody>
+              </table>
+            </div>
+          </div>
+        </section>
+
+        <!-- ====================================================================
+             VIEW: FIND BUYERS
+             ==================================================================== -->
+        <section id="view-buyers" class="app-view">
+          <div class="page-header">
+            <div>
+              <h1 class="page-title">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:24px;height:24px;color:var(--primary-forest);"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+                Verified Buyers
+              </h1>
+              <p class="page-subtitle">Ranked by price match, escrow payment reliability, and pickup convenience.</p>
+            </div>
+          </div>
+
+          <div class="grid-cards-3" id="buyers-grid-container"></div>
+        </section>
+
+        <!-- ====================================================================
+             VIEW: OFFERS & NEGOTIATION
+             ==================================================================== -->
+        <section id="view-offers" class="app-view">
+          <div class="page-header">
+            <div>
+              <h1 class="page-title">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:24px;height:24px;color:var(--harvest-gold);"><path d="m14 2-8 8 3 3 8-8V2h-3z"/><path d="M4 14l6 6"/><path d="m15 5 4 4"/></svg>
+                Buyer Offers & Negotiation
+              </h1>
+              <p class="page-subtitle">Review incoming buyer offers, send counter offers, and lock deals.</p>
+            </div>
+          </div>
+
+          <div class="grid-cards-3" id="offers-grid-container"></div>
+
+          <!-- Negotiation History Audit Card -->
+          <div class="card" style="margin-top: 26px;">
+            <div class="card-header">
+              <h3 class="card-title">Negotiation History</h3>
+              <span class="badge badge-gray">Audit Trail</span>
+            </div>
+            <div id="negotiation-history-timeline"></div>
+          </div>
+        </section>
+
+        <!-- ====================================================================
+             VIEW: LOGISTICS & SHIPMENT TRACKING
+             ==================================================================== -->
+        <section id="view-logistics" class="app-view">
+          <div class="page-header">
+            <div>
+              <h1 class="page-title">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:24px;height:24px;color:var(--market-blue);"><rect width="16" height="13" x="1" y="5" rx="2"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
+                Shipment Tracking
+              </h1>
+              <p class="page-subtitle">Clear tracking from your farmgate to buyer delivery.</p>
+            </div>
+            <span class="badge badge-blue">DEMO DATA</span>
+          </div>
+
+          <div class="card-logistics-hero">
+            <div style="display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 14px; margin-bottom: 18px;">
+              <div>
+                <span class="badge badge-blue" id="shipment-id-badge">SHIP-2026-0002</span>
+                <h2 style="font-size: 1.35rem; font-weight: 800; color:var(--primary-forest); margin-top: 4px;" id="shipment-crop-title">Tomato 500 kg • FreshFoods</h2>
+                <div style="font-size: 0.86rem; color: var(--text-secondary);">Provider: <strong style="color:var(--primary-forest);">AgriMove Logistics</strong> • Vehicle: MH-15-EG-4921</div>
+              </div>
+              <div style="text-align: right;">
+                <div style="font-size: 0.74rem; color: var(--text-muted); text-transform: uppercase; font-weight:700;">Estimated Arrival</div>
+                <div style="font-size: 1.2rem; font-weight: 800; color: var(--primary-forest);" id="shipment-eta">07 Sept, 04:30 PM</div>
+                <span class="badge badge-green" id="shipment-status-pill">ASSIGNED</span>
+              </div>
+            </div>
+
+            <!-- Route Summary -->
+            <div style="background: #FFFFFF; padding: 14px 18px; border-radius: var(--radius-md); display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 12px; border: 1.5px solid var(--status-pending-border); margin-bottom: 26px; box-shadow: var(--shadow-xs);">
+              <div style="display: flex; align-items: center; gap: 10px;">
+                <span style="font-size: 1.2rem;">📍</span>
+                <div>
+                  <div style="font-size: 0.72rem; color: var(--text-muted); text-transform: uppercase; font-weight:700;">Origin (Farmgate)</div>
+                  <div style="font-weight: 800; font-size: 0.92rem; color:var(--primary-forest);">Nashik Farm, Maharashtra</div>
+                </div>
+              </div>
+              <div style="color: var(--primary-green); font-weight: 800; font-size: 1.15rem;">➔ ➔ ➔</div>
+              <div style="display: flex; align-items: center; gap: 10px;">
+                <span style="font-size: 1.2rem;">🏢</span>
+                <div>
+                  <div style="font-size: 0.72rem; color: var(--text-muted); text-transform: uppercase; font-weight:700;">Destination (Buyer Hub)</div>
+                  <div style="font-weight: 800; font-size: 0.92rem; color:var(--primary-forest);">FreshFoods Central Hub, Pune</div>
+                </div>
+              </div>
+            </div>
+
+            <!-- 7-Stage Stepper -->
+            <div class="stepper-track" id="logistics-stepper">
+              <div class="stepper-line">
+                <div class="stepper-line-fill" id="stepper-fill" style="width: 33%;"></div>
+              </div>
+
+              <div class="step-node completed" data-step="1">
+                <div class="step-circle">✓</div>
+                <div class="step-label">Offer Accepted</div>
+              </div>
+              <div class="step-node completed" data-step="2">
+                <div class="step-circle">✓</div>
+                <div class="step-label">Logistics Req.</div>
+              </div>
+              <div class="step-node current" data-step="3">
+                <div class="step-circle">3</div>
+                <div class="step-label">Provider Assigned</div>
+              </div>
+              <div class="step-node" data-step="4">
+                <div class="step-circle">4</div>
+                <div class="step-label">Pickup Sched.</div>
+              </div>
+              <div class="step-node" data-step="5">
+                <div class="step-circle">5</div>
+                <div class="step-label">Picked Up</div>
+              </div>
+              <div class="step-node" data-step="6">
+                <div class="step-circle">6</div>
+                <div class="step-label">In Transit</div>
+              </div>
+              <div class="step-node" data-step="7">
+                <div class="step-circle">7</div>
+                <div class="step-label">Delivered</div>
+              </div>
+            </div>
+
+            <!-- Progression Action -->
+            <div style="display: flex; justify-content: flex-end; align-items: center; margin-top: 26px; gap: 14px; flex-wrap: wrap;">
+              <span style="font-size: 0.84rem; color: var(--text-muted);">Simulate next delivery milestone:</span>
+              <button class="btn btn-primary" onclick="handleProgressShipment()">
+                Update Shipment Status
+              </button>
+            </div>
+          </div>
+        </section>
+
+        <!-- ====================================================================
+             VIEW: PAYMENTS & ESCROW
+             ==================================================================== -->
+        <section id="view-payments" class="app-view">
+          <div class="page-header">
+            <div>
+              <h1 class="page-title">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:24px;height:24px;color:var(--primary-forest);"><rect width="20" height="14" x="2" y="5" rx="2"/><line x1="2" x2="22" y1="10" y2="10"/></svg>
+                Payments & Escrow Protection
+              </h1>
+              <p class="page-subtitle">Buyer funds are deposited in bank escrow before pickup and released upon delivery.</p>
+            </div>
+            <span class="badge badge-lavender">SIMULATED PAYMENT</span>
+          </div>
+
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 22px;" id="payments-container-grid">
+            <div class="card-payment-hero" style="text-align: center; display: flex; flex-direction: column; justify-content: space-between;">
+              <div>
+                <div class="payment-badge-ring pending" id="payment-ring">
+                  <span style="font-size: 1.6rem;" id="payment-ring-icon">🔒</span>
+                </div>
+                <h3 style="font-size: 1.6rem; font-weight: 800; color:var(--primary-forest); margin-bottom: 2px;" id="payment-amount-display">₹15,000</h3>
+                <div style="font-size: 0.86rem; color: var(--text-secondary); margin-bottom: 14px;">
+                  Lot: <strong style="color:var(--primary-forest);">FL-2026-0003 (Tomato 500kg)</strong> • Buyer: <strong style="color:var(--primary-forest);">FreshFoods</strong>
+                </div>
+                <div style="margin-bottom: 16px;">
+                  <span class="badge badge-gold" id="payment-status-badge">PAYMENT PENDING</span>
+                </div>
+                <p style="font-size: 0.85rem; color: var(--text-secondary); max-width: 360px; margin: 0 auto 18px; line-height: 1.45;">
+                  Funds are secured in bank escrow. Release is initiated automatically upon delivery confirmation.
+                </p>
+              </div>
+
+              <div>
+                <button class="btn btn-primary btn-block btn-lg" id="btn-simulate-payment" onclick="handleSimulatePayment()">
+                  ⚡ Simulate Buyer Payment
+                </button>
+              </div>
+            </div>
+
+            <div class="card">
+              <div class="card-header">
+                <h3 class="card-title">Payout Breakdown</h3>
+                <span class="badge badge-green">PAY-2026-0001</span>
+              </div>
+              <div class="entity-meta-grid" style="margin-bottom: 18px;">
+                <div>
+                  <div class="meta-item-label">Gross Amount</div>
+                  <div class="meta-item-val">₹15,000</div>
+                </div>
+                <div>
+                  <div class="meta-item-label">Platform Fee</div>
+                  <div class="meta-item-val" style="color:var(--text-muted);">₹0 (0% Promo)</div>
+                </div>
+                <div>
+                  <div class="meta-item-label">Escrow Handling</div>
+                  <div class="meta-item-val" style="color:var(--text-muted);">₹0 (Paid by Buyer)</div>
+                </div>
+                <div>
+                  <div class="meta-item-label">Net Farmer Payout</div>
+                  <div class="meta-item-val" style="color:var(--primary-forest); font-size:1.1rem;">₹15,000</div>
+                </div>
+              </div>
+
+              <div style="background: var(--soft-green-surface); padding: 14px 16px; border-radius: var(--radius-md); border: 1.5px solid var(--soft-sage);">
+                <div style="font-size: 0.74rem; color: var(--text-muted); text-transform: uppercase; font-weight:800; margin-bottom: 4px;">Linked Bank Account</div>
+                <div style="font-weight: 800; font-size: 0.92rem; color:var(--primary-forest);">State Bank of India — •••• 8842</div>
+                <div style="font-size: 0.8rem; color: var(--text-secondary); margin-top: 2px;">IFSC: SBIN0001248 • A/C Name: Sanjana Devi</div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- ====================================================================
+             VIEW: GRIEVANCES
+             ==================================================================== -->
+        <section id="view-grievances" class="app-view">
+          <div class="page-header">
+            <div>
+              <h1 class="page-title">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:24px;height:24px;color:var(--primary-forest);"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10"/><path d="M12 8v4"/><path d="M12 16h.01"/></svg>
+                Grievance Support
+              </h1>
+              <p class="page-subtitle">Fair resolution for weight, quality, or payment queries.</p>
+            </div>
+            <button class="btn btn-primary" onclick="openGrievanceModal()">
+              + Raise New Grievance
+            </button>
+          </div>
+
+          <div class="card" style="padding: 0; overflow: hidden;">
+            <div class="table-responsive">
+              <table class="custom-table">
+                <thead>
+                  <tr>
+                    <th>Ticket ID</th>
+                    <th>Category</th>
+                    <th>Description</th>
+                    <th>Related Lot</th>
+                    <th>Priority</th>
+                    <th>Status</th>
+                  </tr>
+                </thead>
+                <tbody id="grievance-table-body">
+                  <tr>
+                    <td><code>GRV-2026-0041</code></td>
+                    <td><strong>Payment Delay</strong></td>
+                    <td>Escrow release confirmation query for harvest batch.</td>
+                    <td>FL-2026-0002</td>
+                    <td><span class="badge badge-gold">Medium</span></td>
+                    <td><span class="badge badge-gold">IN REVIEW</span></td>
+                  </tr>
+                  <tr>
+                    <td><code>GRV-2026-0038</code></td>
+                    <td><strong>Weight Discrepancy</strong></td>
+                    <td>Weighbridge calibration check matched successfully.</td>
+                    <td>FL-2026-0001</td>
+                    <td><span class="badge badge-gray">Low</span></td>
+                    <td><span class="badge badge-green">RESOLVED</span></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </section>
+
+        <!-- ====================================================================
+             VIEW: FPO
+             ==================================================================== -->
+        <section id="view-fpo" class="app-view">
+          <div class="page-header">
+            <div>
+              <h1 class="page-title">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:24px;height:24px;color:var(--primary-forest);"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+                Sahyadri Farmers Producer Co. (FPO)
+              </h1>
+              <p class="page-subtitle">Pool crop lots with neighbor farmers to get better institutional pricing.</p>
+            </div>
+            <button class="btn btn-secondary" onclick="openFPOModal()">
+              + Create Aggregation Batch
+            </button>
+          </div>
+
+          <div class="attention-grid">
+            <div class="card" style="background: var(--soft-green-surface); border-color: var(--soft-sage);">
+              <div class="section-label">FPO Members</div>
+              <div style="font-size: 1.6rem; font-weight: 800; font-family: var(--font-main); color: var(--primary-forest);">248 Farmers</div>
+              <div style="font-size: 0.8rem; color: var(--primary-green); margin-top: 4px; font-weight:700;">● 14 Local Clusters</div>
+            </div>
+            <div class="card" style="background: var(--status-countered-bg); border-color: var(--status-countered-border);">
+              <div class="section-label">Pooled Produce</div>
+              <div style="font-size: 1.6rem; font-weight: 800; font-family: var(--font-main); color: var(--primary-forest);">14,500 <span style="font-size:0.92rem;color:var(--text-muted);">kg</span></div>
+              <div style="font-size: 0.8rem; color: var(--text-secondary); margin-top: 4px;">Tomato, Onion & Pomegranate</div>
+            </div>
+            <div class="card" style="background: var(--crop-potato-bg); border-color: var(--crop-potato-border);">
+              <div class="section-label">Pooled Value</div>
+              <div style="font-size: 1.6rem; font-weight: 800; font-family: var(--font-main); color: var(--primary-forest);">₹4,35,000</div>
+              <div style="font-size: 0.8rem; color: var(--harvest-gold); margin-top: 4px; font-weight:800;">+14% Bulk Premium</div>
+            </div>
+          </div>
+        </section>
+
+        <!-- ====================================================================
+             VIEW: PROFILE
+             ==================================================================== -->
+        <section id="view-profile" class="app-view">
+          <div class="page-header">
+            <div>
+              <h1 class="page-title">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:24px;height:24px;color:var(--primary-forest);"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+                Farmer Profile & Credentials
+              </h1>
+              <p class="page-subtitle">Manage personal details, land records, crops, and language preference.</p>
+            </div>
+            <button class="btn btn-primary" onclick="openEditProfileModal()">
+              Edit Profile
+            </button>
+          </div>
+
+          <div style="display: grid; grid-template-columns: 280px 1fr; gap: 22px;" id="profile-grid">
+            <div class="card" style="text-align: center; background: var(--soft-green-surface); border-color: var(--soft-sage);">
+              <div class="user-avatar" style="width: 76px; height: 76px; font-size: 2rem; margin: 0 auto 14px;" id="prof-avatar">S</div>
+              <h2 style="font-size: 1.25rem; font-weight: 800; color:var(--primary-forest);" id="prof-name">Sanjana Devi</h2>
+              <span class="badge badge-green" style="margin: 8px 0 14px;">Verified Farmer</span>
+              <div style="font-size: 0.86rem; color: var(--text-secondary);" id="prof-location">Nashik, Maharashtra</div>
+            </div>
+
+            <div class="card">
+              <div class="card-header">
+                <h3 class="card-title">Farm Details</h3>
+              </div>
+              <div class="entity-meta-grid" style="grid-template-columns: 1fr 1fr 1fr; gap: 14px;">
+                <div>
+                  <div class="meta-item-label">Mobile Number</div>
+                  <div class="meta-item-val" id="prof-mobile">+91 9876543210</div>
+                </div>
+                <div>
+                  <div class="meta-item-label">Email Address</div>
+                  <div class="meta-item-val" id="prof-email">sanjana.devi@farmlink.in</div>
+                </div>
+                <div>
+                  <div class="meta-item-label">State</div>
+                  <div class="meta-item-val" id="prof-state">Maharashtra</div>
+                </div>
+                <div>
+                  <div class="meta-item-label">District & Village</div>
+                  <div class="meta-item-val" id="prof-village">Nashik, Pimpalgaon</div>
+                </div>
+                <div>
+                  <div class="meta-item-label">Primary Crops</div>
+                  <div class="meta-item-val" id="prof-crops">Tomato, Onion</div>
+                </div>
+                <div>
+                  <div class="meta-item-label">Farm Size</div>
+                  <div class="meta-item-val" id="prof-size">4.5 Acres</div>
+                </div>
+                <div>
+                  <div class="meta-item-label">Language</div>
+                  <div class="meta-item-val" id="prof-lang">English (EN)</div>
+                </div>
+                <div>
+                  <div class="meta-item-label">Certification</div>
+                  <div class="meta-item-val" style="color:var(--primary-forest);">Grade A Certified</div>
+                </div>
+                <div>
+                  <div class="meta-item-label">Trust Score</div>
+                  <div class="meta-item-val">98 / 100 ★</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+      </div>
+    </main>
+
+    <!-- --- Mobile Bottom Navigation --- -->
+    <nav class="mobile-bottom-nav">
+      <button class="mobile-nav-item active" data-view="dashboard" onclick="navigate('dashboard')">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect width="7" height="9" x="3" y="3" rx="1"/><rect width="7" height="5" x="14" y="3" rx="1"/><rect width="7" height="9" x="14" y="12" rx="1"/><rect width="7" height="5" x="3" y="16" rx="1"/></svg>
+        <span>Home</span>
+      </button>
+      <button class="mobile-nav-item" data-view="market" onclick="navigate('market')">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="22 7 13.5 15.5 8.5 10.5 2 17"/><polyline points="16 7 22 7 22 13"/></svg>
+        <span>Markets</span>
+      </button>
+      <button class="mobile-nav-item" data-view="lots" onclick="navigate('lots')">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m7.5 4.27 9 5.15"/><path d="M21 8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16Z"/></svg>
+        <span>Lots</span>
+      </button>
+      <button class="mobile-nav-item" data-view="offers" onclick="navigate('offers')">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m14 2-8 8 3 3 8-8V2h-3z"/></svg>
+        <span>Offers</span>
+      </button>
+      <button class="mobile-nav-item" data-view="profile" onclick="navigate('profile')">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+        <span>Profile</span>
+      </button>
+    </nav>
+  </div>
+
+  <!-- ==========================================================================
+       MODAL: AI ANALYSIS BREAKDOWN
+       ========================================================================== -->
+  <div class="modal-overlay" id="modal-ai-analysis">
+    <div class="modal-box" style="max-width: 600px;">
+      <div class="modal-header">
+        <div class="modal-title">
+          <span>✨ FarmLink AI Market Analysis</span>
+        </div>
+        <button class="icon-btn" onclick="closeModal('modal-ai-analysis')">✕</button>
+      </div>
+      <div class="modal-body">
+        <div style="background: var(--soft-green-surface); border: 1.5px solid var(--soft-sage); padding: 14px 18px; border-radius: var(--radius-md); margin-bottom: 18px;">
+          <div style="font-size: 0.74rem; text-transform: uppercase; color: var(--text-muted); font-weight:800; letter-spacing:0.04em;">Analyzed Produce Batch</div>
+          <div style="font-size: 1.1rem; font-weight: 800; color: var(--primary-forest); margin-top: 2px;">
+            Lot FL-2026-0003 • Tomato (500 kg, Grade A)
+          </div>
+        </div>
+
+        <div class="entity-meta-grid" style="grid-template-columns: 1fr 1fr; gap: 12px; margin-bottom: 18px;">
+          <div>
+            <div class="meta-item-label">Market Trend</div>
+            <div class="meta-item-val" style="color:var(--primary-forest);">+12% Rising (Arrival Deficit)</div>
+          </div>
+          <div>
+            <div class="meta-item-label">Buyer Demand</div>
+            <div class="meta-item-val">High (8 Verified Buyers)</div>
+          </div>
+          <div>
+            <div class="meta-item-label">Grade A Premium</div>
+            <div class="meta-item-val" style="color:var(--primary-forest);">+18% over Grade B</div>
+          </div>
+          <div>
+            <div class="meta-item-label">FreshFoods Reliability</div>
+            <div class="meta-item-val">96% On-Time Escrow</div>
+          </div>
+          <div>
+            <div class="meta-item-label">Farmer Negotiation Strength</div>
+            <div class="meta-item-val" style="color:var(--primary-forest);">High (8.4 / 10)</div>
+          </div>
+          <div>
+            <div class="meta-item-label">Logistics Cost</div>
+            <div class="meta-item-val">₹1.20 / kg (Cluster Truck)</div>
+          </div>
+          <div style="grid-column: span 2; background: var(--warm-cream); border:1px solid var(--status-countered-border); padding: 12px 16px; border-radius: var(--radius-md);">
+            <div class="meta-item-label">Expected Net Realization</div>
+            <div class="meta-item-val" style="font-size: 1.15rem; color: var(--primary-forest);">₹30.80 / kg (Net Payout: ₹15,400)</div>
+          </div>
+        </div>
+
+        <div style="background: var(--status-countered-bg); border: 1.5px solid var(--status-countered-border); padding: 16px; border-radius: var(--radius-md); margin-bottom: 6px;">
+          <div style="display:flex; align-items:center; gap:6px; margin-bottom: 6px;">
+            <strong style="color: var(--status-countered-text); font-size:0.94rem;">Recommendation: NEGOTIATE</strong>
+          </div>
+          <p style="font-size: 0.88rem; color: var(--text-main); line-height: 1.45;">
+            FreshFoods offered ₹30/kg. Wholesale terminal deficit allows counter-offering at <strong>₹32/kg</strong> with a 91% probability of immediate acceptance.
+          </p>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button class="btn btn-secondary" onclick="closeModal('modal-ai-analysis')">Close</button>
+        <button class="btn btn-primary" onclick="handleUseAISuggestedCounter()">
+          Use AI Suggested Counter (₹32/kg)
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==========================================================================
+       MODAL: CREATE LOT
+       ========================================================================== -->
+  <div class="modal-overlay" id="modal-create-lot">
+    <div class="modal-box">
+      <div class="modal-header">
+        <div class="modal-title">Publish New Harvest Lot</div>
+        <button class="icon-btn" onclick="closeModal('modal-create-lot')">✕</button>
+      </div>
+      <div class="modal-body">
+        <form id="form-create-lot" onsubmit="handlePublishLotSubmit(event)">
+          <div class="form-row-2">
+            <div class="form-group">
+              <label class="form-label" for="lot-crop">Crop</label>
+              <select id="lot-crop" class="form-control" required>
+                <option value="Tomato">Tomato</option>
+                <option value="Onion">Onion</option>
+                <option value="Wheat">Wheat</option>
+                <option value="Cotton">Cotton</option>
+                <option value="Potato">Potato</option>
+                <option value="Pomegranate">Pomegranate</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="lot-variety">Variety</label>
+              <input type="text" id="lot-variety" class="form-control" placeholder="e.g. Vaishali / Hybrid" required value="Hybrid Red">
+            </div>
+          </div>
+
+          <div class="form-row-2">
+            <div class="form-group">
+              <label class="form-label" for="lot-qty">Quantity</label>
+              <input type="number" id="lot-qty" class="form-control" placeholder="500" required value="500">
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="lot-unit">Unit</label>
+              <select id="lot-unit" class="form-control">
+                <option value="kg">Kilograms (kg)</option>
+                <option value="quintal">Quintals (100 kg)</option>
+                <option value="ton">Tonnes</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-row-2">
+            <div class="form-group">
+              <label class="form-label" for="lot-grade">Grade</label>
+              <select id="lot-grade" class="form-control">
+                <option value="Grade A">Grade A (Premium)</option>
+                <option value="Grade B">Grade B (Standard)</option>
+                <option value="Organic">Organic Certified</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="lot-price">Expected Price (₹/kg)</label>
+              <input type="number" step="0.5" id="lot-price" class="form-control" placeholder="32" required value="32">
+            </div>
+          </div>
+
+          <div class="form-row-2">
+            <div class="form-group">
+              <label class="form-label" for="lot-harvest">Harvest Date</label>
+              <input type="date" id="lot-harvest" class="form-control" required value="2026-09-07">
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="lot-pincode">Pincode</label>
+              <input type="text" id="lot-pincode" class="form-control" placeholder="422209" value="422209" required>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="lot-notes">Notes</label>
+            <input type="text" id="lot-notes" class="form-control" placeholder="e.g. Graded & crate-packed">
+          </div>
+
+          <button type="submit" class="btn btn-primary btn-block btn-lg" style="margin-top: 8px;">
+            Publish Lot to Marketplace
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==========================================================================
+       MODAL: COUNTER OFFER
+       ========================================================================== -->
+  <div class="modal-overlay" id="modal-counter-offer">
+    <div class="modal-box">
+      <div class="modal-header">
+        <div class="modal-title">Send Counter Offer to FreshFoods</div>
+        <button class="icon-btn" onclick="closeModal('modal-counter-offer')">✕</button>
+      </div>
+      <div class="modal-body">
+        <div class="entity-meta-grid" style="margin-bottom: 18px;">
+          <div>
+            <div class="meta-item-label">Current Buyer Offer</div>
+            <div class="meta-item-val">₹30.00 / kg</div>
+          </div>
+          <div>
+            <div class="meta-item-label">AI Suggested Range</div>
+            <div class="meta-item-val" style="color:var(--primary-forest);">₹31.00 – ₹32.00 / kg</div>
+          </div>
+        </div>
+
+        <form id="form-counter" onsubmit="handleSendCounterSubmit(event)">
+          <div class="form-group">
+            <label class="form-label" for="counter-price-input">Your Counter Price (₹/kg)</label>
+            <input type="number" step="0.5" id="counter-price-input" class="form-control" style="font-size: 1.35rem; font-weight:800; color:var(--primary-forest);" value="32" required>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="counter-note">Message to Buyer</label>
+            <textarea id="counter-note" class="form-control" rows="3" placeholder="Explain your pricing rationale...">Grade A premium harvested lot with 98% uniformity. High market demand allows counter at ₹32/kg.</textarea>
+          </div>
+
+          <button type="submit" class="btn btn-primary btn-block btn-lg">
+            Send Counter Offer (₹32/kg)
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==========================================================================
+       MODAL: BUYER DETAILS
+       ========================================================================== -->
+  <div class="modal-overlay" id="modal-buyer-details">
+    <div class="modal-box">
+      <div class="modal-header">
+        <div class="modal-title" id="buyer-modal-title">FreshFoods Details</div>
+        <button class="icon-btn" onclick="closeModal('modal-buyer-details')">✕</button>
+      </div>
+      <div class="modal-body" id="buyer-modal-content"></div>
+      <div class="modal-footer">
+        <button class="btn btn-secondary" onclick="closeModal('modal-buyer-details')">Close</button>
+        <button class="btn btn-primary" onclick="handleMakeOfferToBuyer()">Make Offer to Buyer</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==========================================================================
+       MODAL: EDIT PROFILE
+       ========================================================================== -->
+  <div class="modal-overlay" id="modal-edit-profile">
+    <div class="modal-box">
+      <div class="modal-header">
+        <div class="modal-title">Edit Profile Information</div>
+        <button class="icon-btn" onclick="closeModal('modal-edit-profile')">✕</button>
+      </div>
+      <div class="modal-body">
+        <form id="form-edit-profile" onsubmit="handleSaveProfileSubmit(event)">
+          <div class="form-row-2">
+            <div class="form-group">
+              <label class="form-label" for="edit-prof-name">Full Name</label>
+              <input type="text" id="edit-prof-name" class="form-control" value="Sanjana Devi" required>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="edit-prof-mobile">Mobile Number</label>
+              <input type="tel" id="edit-prof-mobile" class="form-control" value="9876543210" required>
+            </div>
+          </div>
+
+          <div class="form-row-2">
+            <div class="form-group">
+              <label class="form-label" for="edit-prof-crops">Primary Crops</label>
+              <input type="text" id="edit-prof-crops" class="form-control" value="Tomato, Onion" required>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="edit-prof-size">Farm Size (Acres)</label>
+              <input type="number" step="0.5" id="edit-prof-size" class="form-control" value="4.5" required>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="edit-prof-lang">Preferred Language</label>
+            <select id="edit-prof-lang" class="form-control">
+              <option value="en">English</option>
+              <option value="ta">தமிழ் (Tamil)</option>
+              <option value="hi">हिन्दी (Hindi)</option>
+              <option value="te">తెలుగు (Telugu)</option>
+              <option value="ml">മലയാളം (Malayalam)</option>
+              <option value="kn">ಕನ್ನಡ (Kannada)</option>
+            </select>
+          </div>
+
+          <button type="submit" class="btn btn-primary btn-block btn-lg" style="margin-top: 8px;">
+            Save Profile Changes
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==========================================================================
+       MODAL: CREATE GRIEVANCE
+       ========================================================================== -->
+  <div class="modal-overlay" id="modal-create-grievance">
+    <div class="modal-box">
+      <div class="modal-header">
+        <div class="modal-title">Raise Grievance Ticket</div>
+        <button class="icon-btn" onclick="closeModal('modal-create-grievance')">✕</button>
+      </div>
+      <div class="modal-body">
+        <form id="form-create-grievance" onsubmit="handleCreateGrievanceSubmit(event)">
+          <div class="form-group">
+            <label class="form-label" for="grv-cat">Category</label>
+            <select id="grv-cat" class="form-control" required>
+              <option value="Payment Delay">Payment Delay</option>
+              <option value="Logistics Delay">Logistics / Pickup Delay</option>
+              <option value="Grade Dispute">Quality Grade Dispute</option>
+              <option value="Weighment Issue">Weighbridge Difference</option>
+            </select>
+          </div>
+
+          <div class="form-row-2">
+            <div class="form-group">
+              <label class="form-label" for="grv-lot">Related Lot</label>
+              <input type="text" id="grv-lot" class="form-control" value="FL-2026-0003" required>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="grv-priority">Priority</label>
+              <select id="grv-priority" class="form-control">
+                <option value="High">High Priority</option>
+                <option value="Medium" selected>Medium Priority</option>
+                <option value="Low">Low Priority</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="grv-desc">Description</label>
+            <textarea id="grv-desc" class="form-control" rows="3" placeholder="Provide details of the issue..." required></textarea>
+          </div>
+
+          <button type="submit" class="btn btn-primary btn-block btn-lg">Submit Grievance</button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==========================================================================
+       MODAL: FPO AGGREGATION
+       ========================================================================== -->
+  <div class="modal-overlay" id="modal-fpo">
+    <div class="modal-box">
+      <div class="modal-header">
+        <div class="modal-title">Create FPO Aggregation Batch</div>
+        <button class="icon-btn" onclick="closeModal('modal-fpo')">✕</button>
+      </div>
+      <div class="modal-body">
+        <p style="font-size:0.88rem; color:var(--text-secondary); margin-bottom:16px; line-height:1.45;">
+          Pool your 500kg Tomato lot with 4 neighbor farmers to reach a 2,500kg wholesale truckload.
+        </p>
+        <div class="entity-meta-grid" style="margin-bottom:18px;">
+          <div>
+            <div class="meta-item-label">Individual Price</div>
+            <div class="meta-item-val">₹30/kg</div>
+          </div>
+          <div>
+            <div class="meta-item-label">FPO Bulk Price</div>
+            <div class="meta-item-val" style="color:var(--primary-forest);">₹33.50/kg</div>
+          </div>
+        </div>
+        <button class="btn btn-primary btn-block btn-lg" onclick="handleFPOAggregateSubmit()">
+          Confirm & Pool Lot FL-2026-0003
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==========================================================================
+       DRAWER: NOTIFICATIONS
+       ========================================================================== -->
+  <div class="drawer" id="drawer-notifications">
+    <div class="drawer-header">
+      <div style="font-size: 1.1rem; font-weight: 800; color:var(--primary-forest); display:flex; align-items:center; gap:8px;">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:20px;height:20px;color:var(--primary-green);"><path d="M6 8a6 6 0 0 1 12 0c0 7 3 9 3 9H3s3-2 3-9"/><path d="M10.3 21a1.94 1.94 0 0 0 3.4 0"/></svg>
+        Notifications
+      </div>
+      <div style="display:flex; align-items:center; gap:8px;">
+        <button class="btn btn-sm btn-ghost" onclick="handleMarkAllNotificationsRead()">Mark all read</button>
+        <button class="icon-btn" onclick="toggleNotificationsDrawer()">✕</button>
+      </div>
+    </div>
+    <div class="drawer-body" id="notifications-list"></div>
+  </div>
+
+  <!-- ==========================================================================
+       DRAWER: FLOATING AI ASSISTANT CHAT
+       ========================================================================== -->
+  <button class="floating-ai-btn" id="btn-floating-ai" onclick="toggleAIChatDrawer()">
+    <span>✨ Ask FarmLink AI</span>
+  </button>
+
+  <div class="drawer" id="drawer-ai-chat">
+    <div class="drawer-header">
+      <div>
+        <div style="font-weight: 800; font-size: 1rem; color:var(--primary-forest);">FarmLink AI Advisor</div>
+        <div style="font-size: 0.74rem; color: var(--primary-green); font-weight:700;">● Online • Agricultural Intelligence</div>
+      </div>
+      <button class="icon-btn" onclick="toggleAIChatDrawer()">✕</button>
+    </div>
+    <div class="drawer-body" id="ai-chat-messages" style="display:flex; flex-direction:column;"></div>
+    <div style="padding: 16px; border-top: 1px solid var(--border-color); background: var(--soft-green-surface);">
+      <div class="chat-prompt-chips" style="margin-bottom: 12px;">
+        <button class="prompt-chip" onclick="handleQuickAIQuestion('Should I sell my tomatoes today?')">Should I sell now?</button>
+        <button class="prompt-chip" onclick="handleQuickAIQuestion('Who is the best verified buyer for my lot?')">Best buyer?</button>
+        <button class="prompt-chip" onclick="handleQuickAIQuestion('What is the current tomato market price trend?')">Tomato price trend?</button>
+        <button class="prompt-chip" onclick="handleQuickAIQuestion('Track my shipment SHIP-2026-0002')">Track shipment?</button>
+      </div>
+
+      <form id="form-ai-chat" onsubmit="handleSendCustomAIMessage(event)" style="display:flex; gap:8px;">
+        <input type="text" id="ai-chat-input" class="form-control" placeholder="Ask about prices, buyers, mandi...">
+        <button type="submit" class="btn btn-primary" style="padding: 8px 14px;">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:16px;height:16px;"><line x1="22" x2="11" y1="2" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Toast Container -->
+  <div class="toast-container" id="toast-container"></div>
+
+  <!-- Scripts -->
+  <script src="app.js"></script>
+</body>
+</html>
