@@ -102,10 +102,10 @@ export const RoleSelection = ({
           className="space-y-3"
         >
           {/* Trust Badge */}
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-farm-surface border border-farm-border shadow-subtle text-xs font-bold text-farm-brand">
-            <span className="w-2 h-2 rounded-full bg-farm-brand"></span>
-            <span>{t('common.mandiNetwork', 'Live Mandi Trade Network')}</span>
-            <span className="text-farm-border">•</span>
+          <div className="inline-flex flex-wrap items-center justify-center gap-1.5 xs:gap-2 px-3 py-1.5 rounded-full bg-farm-surface border border-farm-border shadow-subtle text-[11px] xs:text-xs font-bold text-farm-brand max-w-full text-center">
+            <span className="w-2 h-2 rounded-full bg-farm-brand shrink-0"></span>
+            <span className="whitespace-nowrap">{t('common.mandiNetwork', 'Live Mandi Trade Network')}</span>
+            <span className="text-farm-border hidden xs:inline">•</span>
             <span className="text-farm-text-secondary font-medium">Tamil Nadu &bull; Karnataka &bull; Maharashtra</span>
           </div>
 

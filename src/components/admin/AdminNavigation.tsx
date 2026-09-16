@@ -128,7 +128,7 @@ export const AdminNavigation = ({
       </nav>
 
       {/* 2. Mobile Bottom Navigation Bar */}
-      <nav className="fixed bottom-0 left-0 right-0 z-40 bg-farm-surface border-t border-farm-border md:hidden px-3 py-2 select-none shadow-elevated">
+      <nav className="fixed bottom-0 left-0 right-0 z-40 bg-farm-surface border-t border-farm-border md:hidden px-2 pt-1 pb-[calc(0.5rem+env(safe-area-inset-bottom,0px))] select-none shadow-elevated">
         <div className="grid grid-cols-5 gap-1 items-center">
           {primaryMobileItems.map((item) => {
             const isActive = activeTab === item.id;
@@ -141,7 +141,7 @@ export const AdminNavigation = ({
                   setShowMobileMoreMenu(false);
                   onSelectTab(item.id);
                 }}
-                className={`flex flex-col items-center justify-center py-1 rounded-xl text-[10px] font-bold transition-all relative ${
+                className={`flex flex-col items-center justify-center py-1 rounded-xl text-[10px] font-bold transition-all relative min-h-[44px] ${
                   isActive ? 'text-farm-brand' : 'text-farm-text-secondary hover:text-farm-text'
                 }`}
               >
@@ -162,7 +162,7 @@ export const AdminNavigation = ({
           <button
             type="button"
             onClick={() => setShowMobileMoreMenu(!showMobileMoreMenu)}
-            className={`flex flex-col items-center justify-center py-1 rounded-xl text-[10px] font-bold transition-all relative ${
+            className={`flex flex-col items-center justify-center py-1 rounded-xl text-[10px] font-bold transition-all relative min-h-[44px] ${
               secondaryMobileItems.some((i) => i.id === activeTab)
                 ? 'text-farm-brand'
                 : 'text-farm-text-secondary hover:text-farm-text'

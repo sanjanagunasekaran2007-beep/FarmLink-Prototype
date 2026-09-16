@@ -112,7 +112,7 @@ export const FarmLinkSplash = ({ onComplete }: FarmLinkSplashProps) => {
           2. RESTORED VISIBLE SEED-TO-PLANT GROWTH ANIMATION CANVAS
           ==================================================================== */}
       <div className="w-full flex flex-col items-center justify-center my-auto py-3">
-        <div className="w-72 h-64 sm:w-88 sm:h-72 relative flex items-center justify-center bg-farm-surface rounded-3xl border border-farm-border shadow-card p-3 overflow-hidden">
+        <div className="w-full max-w-[280px] xs:max-w-[320px] sm:max-w-[360px] h-60 sm:h-72 relative flex items-center justify-center bg-farm-surface rounded-3xl border border-farm-border shadow-card p-3 overflow-hidden">
           <svg
             viewBox="0 0 300 220"
             className="w-full h-full overflow-visible"

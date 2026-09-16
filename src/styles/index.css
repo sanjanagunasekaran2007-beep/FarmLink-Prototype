@@ -208,6 +208,8 @@
     font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
     min-height: 100vh;
     min-height: 100dvh;
+    width: 100%;
+    max-width: 100%;
     overflow-x: hidden;
     text-rendering: optimizeLegibility;
     -webkit-font-smoothing: antialiased;
@@ -219,6 +221,26 @@
     font-weight: 700;
     color: var(--text-primary);
     letter-spacing: -0.015em;
+    overflow-wrap: break-word;
+    word-break: break-word;
+  }
+
+  p, span, label, div {
+    overflow-wrap: break-word;
+  }
+
+  /* Safe Area Inset Support */
+  .safe-area-top {
+    padding-top: env(safe-area-inset-top, 0px);
+  }
+  .safe-area-bottom {
+    padding-bottom: env(safe-area-inset-bottom, 0px);
+  }
+  .safe-area-left {
+    padding-left: env(safe-area-inset-left, 0px);
+  }
+  .safe-area-right {
+    padding-right: env(safe-area-inset-right, 0px);
   }
 
   /* Accessibility Text Size Scales */
@@ -300,8 +322,12 @@
     font-weight: 600;
     border-radius: 0.75rem;
     padding: 0.625rem 1.25rem;
+    min-height: 44px;
     transition: all 0.15s ease;
     border: 1px solid transparent;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
   }
   .btn-farm-primary:hover {
     opacity: 0.92;
@@ -317,7 +343,11 @@
     font-weight: 600;
     border-radius: 0.75rem;
     padding: 0.625rem 1.25rem;
+    min-height: 44px;
     transition: all 0.15s ease;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
   }
   .btn-farm-secondary:hover {
     background-color: var(--bg-surface-hover);
@@ -335,8 +365,10 @@
     border-radius: 0.75rem;
     padding: 0.625rem 1rem;
     font-size: 0.875rem;
+    min-height: 44px;
     transition: border-color 0.15s ease, box-shadow 0.15s ease;
     width: 100%;
+    max-width: 100%;
   }
   .input-farm:focus {
     border-color: var(--brand-primary);
@@ -354,6 +386,8 @@
     border-radius: 1rem;
     box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.04);
     transition: border-color 0.15s ease, box-shadow 0.15s ease;
+    max-width: 100%;
+    min-width: 0;
   }
 
   .card-farm-elevated {
@@ -361,6 +395,40 @@
     border: 1px solid var(--border-subtle);
     border-radius: 1.25rem;
     box-shadow: 0 4px 16px 0 rgba(0, 0, 0, 0.08);
+    max-width: 100%;
+    min-width: 0;
+  }
+
+  /* Responsive Table Container */
+  .table-container-responsive {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  /* Responsive Modal Layouts */
+  .modal-overlay-responsive {
+    position: fixed;
+    inset: 0;
+    z-index: 50;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.75rem;
+    background-color: var(--overlay);
+    overflow-y: auto;
+  }
+
+  .modal-dialog-responsive {
+    width: 100%;
+    max-width: min(95vw, 42rem);
+    max-height: calc(100dvh - 2rem);
+    overflow-y: auto;
+    background-color: var(--bg-surface);
+    border-radius: 1.25rem;
+    border: 1px solid var(--border-subtle);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.12);
   }
 
   /* Prevent any gradient usage */

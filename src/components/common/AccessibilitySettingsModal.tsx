@@ -37,16 +37,16 @@ export const AccessibilitySettingsModal = ({
 
   return (
     <AnimatePresence>
-      <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/60 backdrop-blur-none select-none">
+      <div className="fixed inset-0 z-50 flex items-center justify-center p-3 xs:p-4 bg-black/60 backdrop-blur-none select-none">
         <motion.div
           initial={{ opacity: 0, scale: 0.95, y: 10 }}
           animate={{ opacity: 1, scale: 1, y: 0 }}
           exit={{ opacity: 0, scale: 0.95, y: 10 }}
           transition={{ duration: 0.2 }}
-          className="w-full max-w-xl bg-farm-surface rounded-3xl border border-farm-border shadow-card overflow-hidden flex flex-col max-h-[90vh]"
+          className="w-full max-w-xl bg-farm-surface rounded-3xl border border-farm-border shadow-card overflow-hidden flex flex-col max-h-[calc(100dvh-1.5rem)] sm:max-h-[90vh]"
         >
           {/* Header */}
-          <div className="bg-farm-brand text-white px-6 py-4 flex items-center justify-between border-b border-farm-border">
+          <div className="bg-farm-brand text-white px-5 sm:px-6 py-3.5 sm:py-4 flex items-center justify-between border-b border-farm-border">
             <div className="flex items-center gap-3">
               <div className="w-9 h-9 rounded-xl bg-white/10 flex items-center justify-center text-white">
                 <Sliders className="w-5 h-5" />
@@ -70,7 +70,7 @@ export const AccessibilitySettingsModal = ({
           </div>
 
           {/* Body */}
-          <div className="p-6 overflow-y-auto space-y-6">
+          <div className="p-4 sm:p-6 overflow-y-auto space-y-5 sm:space-y-6">
             {/* 0. Color Theme (Light / Dark / System) */}
             <div className="space-y-3 pb-4 border-b border-farm-border">
               <div className="flex items-center justify-between">
@@ -101,7 +101,7 @@ export const AccessibilitySettingsModal = ({
                 {t('accessibility.textSizeDesc', 'Make text easier to read across all screens.')}
               </p>
 
-              <div className="grid grid-cols-3 gap-2.5 pt-1">
+              <div className="grid grid-cols-1 xs:grid-cols-3 gap-2.5 pt-1">
                 {[
                   { id: 'default', label: t('accessibility.defaultText', 'Default') },
                   { id: 'larger', label: t('accessibility.largerText', 'Larger (+15%)') },
@@ -113,7 +113,7 @@ export const AccessibilitySettingsModal = ({
                       key={size.id}
                       type="button"
                       onClick={() => updateSetting('textSize', size.id as TextSizeMode)}
-                      className={`p-3 rounded-2xl border text-xs font-bold text-center transition-all cursor-pointer ${
+                      className={`p-3 rounded-2xl border text-xs font-bold text-center transition-all cursor-pointer min-h-[44px] flex items-center justify-center ${
                         isSelected
                           ? 'bg-farm-brand text-white border-farm-brand shadow-subtle'
                           : 'bg-farm-surface-muted text-farm-text border-farm-border hover:bg-farm-surface-hover'

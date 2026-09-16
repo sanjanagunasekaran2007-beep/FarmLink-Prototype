@@ -104,8 +104,8 @@ export const LogisticsNavigation = ({
       </nav>
 
       {/* Mobile Bottom Navigation Bar */}
-      <nav className="md:hidden fixed bottom-0 left-0 right-0 z-40 bg-farm-surface border-t border-farm-border shadow-card safe-area-bottom select-none">
-        <div className={`grid ${navItems.length === 4 ? 'grid-cols-4' : 'grid-cols-6'} gap-0.5 px-1 py-1.5 max-w-lg mx-auto`}>
+      <nav className="md:hidden fixed bottom-0 left-0 right-0 z-40 bg-farm-surface border-t border-farm-border shadow-card px-1 pt-1 pb-[calc(0.375rem+env(safe-area-inset-bottom,0px))] select-none">
+        <div className={`grid ${navItems.length === 4 ? 'grid-cols-4' : 'grid-cols-6'} gap-0.5 px-1 py-1 max-w-lg mx-auto`}>
           {navItems.map((item) => {
             const isActive = activeTab === item.id;
             return (
@@ -114,7 +114,7 @@ export const LogisticsNavigation = ({
                 type="button"
                 onClick={() => onSelectTab(item.id)}
                 id={`mob-nav-logistics-${item.id}`}
-                className={`flex flex-col items-center justify-center py-1.5 px-0.5 rounded-xl text-[10px] font-bold transition-all relative cursor-pointer ${
+                className={`flex flex-col items-center justify-center py-1.5 px-0.5 rounded-xl text-[10px] font-bold transition-all relative cursor-pointer min-h-[44px] ${
                   isActive
                     ? 'bg-farm-brand text-white'
                     : 'text-farm-text-secondary hover:text-farm-text'
@@ -128,7 +128,7 @@ export const LogisticsNavigation = ({
                     </span>
                   )}
                 </div>
-                <span className="truncate w-full text-center leading-tight">
+                <span className="truncate w-full text-center leading-tight text-[9px] xs:text-[10px]">
                   {item.label}
                 </span>
               </button>

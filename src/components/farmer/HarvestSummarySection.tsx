@@ -42,7 +42,7 @@ export const HarvestSummarySection = ({
       </div>
 
       {/* 4 Distinct Stat Cards with Purposeful Accents */}
-      <div className="grid grid-cols-2 lg:grid-cols-4 gap-3.5">
+      <div className="grid grid-cols-1 xs:grid-cols-2 lg:grid-cols-4 gap-3">
         {/* 1. Total Harvests (Deep Forest) */}
         <div className="p-4 rounded-2xl bg-farm-surface-secondary border border-farm-border flex items-center gap-3.5 shadow-subtle">
           <div className="w-11 h-11 rounded-2xl bg-farm-brand text-white flex items-center justify-center shrink-0 shadow-subtle">
