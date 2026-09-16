@@ -13,7 +13,7 @@ import {
   SupportRequestItem,
   SupportCategory,
   RoleType
-} from '@/types';
+} from '../../types';
 import { BuyerHeader } from './BuyerHeader';
 import { BuyerNavigation } from './BuyerNavigation';
 import { BuyerDashboardView } from './tabs/BuyerDashboardView';
@@ -38,12 +38,12 @@ import {
   INITIAL_BUYER_ORDERS, 
   INITIAL_BUYER_TRANSACTIONS,
   INITIAL_BUYER_PROFILE
-} from '@/data/buyerDemoData';
+} from '../../data/buyerDemoData';
 import {
   initialSharedNotifications,
   defaultNotificationPreferences,
   initialSupportRequests
-} from '@/data/supportAndFaqData';
+} from '../../data/supportAndFaqData';
 
 interface BuyerDashboardProps {
   onLogout: () => void;

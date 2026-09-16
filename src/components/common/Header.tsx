@@ -24,23 +24,23 @@ export const Header = ({
 
   return (
     <>
-      <header className="w-full bg-[#24352D] dark:bg-[#1D2C25] text-[#F5F1E8] border-b border-[#3B4C41] px-4 sm:px-8 py-3.5 sticky top-0 z-30 select-none shadow-card transition-colors">
+      <header className="w-full bg-farm-navigation text-farm-navigation-text border-b border-farm-border px-4 sm:px-8 py-3.5 sticky top-0 z-30 select-none shadow-card transition-colors">
         <div className="max-w-7xl mx-auto flex items-center justify-between">
           {/* Brand Group */}
           <div className="flex items-center gap-3">
-            <div className="w-9 h-9 rounded-xl bg-farm-terracotta flex items-center justify-center text-white shadow-subtle border border-farm-gold/40">
+            <div className="w-9 h-9 rounded-xl bg-farm-harvest flex items-center justify-center text-white shadow-subtle border border-farm-market/40">
               <Sprout className="w-5 h-5 text-white" strokeWidth={2.4} />
             </div>
             <div className="flex flex-col">
               <div className="flex items-center gap-2">
-                <span className="font-display font-bold text-lg text-[#F5F1E8] tracking-wider leading-none">
+                <span className="font-display font-bold text-lg text-farm-navigation-text tracking-wider leading-none">
                   {t('common.appName', 'FARMLINK')}
                 </span>
-                <span className="hidden md:inline-flex items-center px-2 py-0.5 rounded-full bg-[#1A2922] dark:bg-[#2B3D33] text-farm-gold text-[10px] font-bold tracking-wide uppercase border border-farm-gold/40">
+                <span className="hidden md:inline-flex items-center px-2 py-0.5 rounded-full bg-farm-navigation-text/10 text-farm-market text-[10px] font-bold tracking-wide uppercase border border-farm-market/40">
                   {t('common.mandiNetwork', 'Live Mandi Network')}
                 </span>
               </div>
-              <span className="text-[10px] font-medium text-[#C0C9BF] tracking-wider uppercase mt-0.5">
+              <span className="text-[10px] font-medium text-farm-text-muted tracking-wider uppercase mt-0.5">
                 {t('common.tagline', 'Intelligent Agricultural Marketplace')}
               </span>
             </div>
@@ -49,17 +49,17 @@ export const Header = ({
           {/* Action Controls */}
           <div className="flex items-center gap-2 sm:gap-3">
             {/* Theme Switcher Toggle */}
-            <ThemeSwitcher size="md" className="bg-[#1A2922] dark:bg-[#2B3D33] border-[#3B4C41] text-[#F5F1E8]" />
+            <ThemeSwitcher size="md" className="bg-farm-navigation-text/10 border-farm-border text-farm-navigation-text" />
 
             {/* Language Selector Button */}
             <button
               type="button"
               onClick={() => setIsLangModalOpen(true)}
-              className="inline-flex items-center gap-1.5 px-3 py-2 rounded-xl border border-[#3B4C41] text-xs font-bold text-[#F5F1E8] bg-[#1A2922] dark:bg-[#2B3D33] hover:bg-[#2B3D33] active:scale-95 transition-all shadow-subtle cursor-pointer"
+              className="inline-flex items-center gap-1.5 px-3 py-2 rounded-xl border border-farm-border text-xs font-bold text-farm-navigation-text bg-farm-navigation-text/10 hover:bg-farm-navigation-text/20 active:scale-95 transition-all shadow-subtle cursor-pointer"
               id="header-lang-btn"
               title="Change Language / மொழி மாற்றுக"
             >
-              <Globe className="w-3.5 h-3.5 text-farm-gold" />
+              <Globe className="w-3.5 h-3.5 text-farm-market" />
               <span className="font-semibold">{currentLanguageMeta.native}</span>
             </button>
 
@@ -67,18 +67,18 @@ export const Header = ({
             <button
               type="button"
               onClick={() => setIsAccessModalOpen(true)}
-              className="p-2 rounded-xl border border-[#3B4C41] text-[#F5F1E8] bg-[#1A2922] dark:bg-[#2B3D33] hover:bg-[#2B3D33] active:scale-95 transition-all shadow-subtle cursor-pointer"
+              className="p-2 rounded-xl border border-farm-border text-farm-navigation-text bg-farm-navigation-text/10 hover:bg-farm-navigation-text/20 active:scale-95 transition-all shadow-subtle cursor-pointer"
               id="header-access-btn"
               title="Accessibility Settings / ಸುಲಭ ಪ್ರವೇಶ"
             >
-              <Sliders className="w-4 h-4 text-farm-gold" />
+              <Sliders className="w-4 h-4 text-farm-market" />
             </button>
 
             {isSplash ? (
               <button
                 type="button"
                 onClick={onSkipSplash}
-                className="px-3.5 py-2 rounded-xl border border-[#3B4C41] text-xs font-bold text-[#F5F1E8] bg-farm-terracotta hover:opacity-90 active:scale-95 transition-all shadow-subtle cursor-pointer"
+                className="px-3.5 py-2 rounded-xl border border-farm-harvest text-xs font-bold text-white bg-farm-harvest hover:opacity-90 active:scale-95 transition-all shadow-subtle cursor-pointer"
                 id="skip-splash-button"
               >
                 Skip Intro
@@ -87,10 +87,10 @@ export const Header = ({
               <button
                 type="button"
                 onClick={onReplay}
-                className="inline-flex items-center gap-1.5 px-3.5 py-2 rounded-xl border border-[#3B4C41] text-xs font-bold text-[#F5F1E8] bg-[#1A2922] dark:bg-[#2B3D33] hover:bg-[#2B3D33] active:scale-95 transition-all shadow-subtle cursor-pointer"
+                className="inline-flex items-center gap-1.5 px-3.5 py-2 rounded-xl border border-farm-border text-xs font-bold text-farm-navigation-text bg-farm-navigation-text/10 hover:bg-farm-navigation-text/20 active:scale-95 transition-all shadow-subtle cursor-pointer"
                 id="replay-intro-button"
               >
-                <RotateCcw className="w-3.5 h-3.5 text-farm-gold" />
+                <RotateCcw className="w-3.5 h-3.5 text-farm-market" />
                 <span className="hidden sm:inline">Replay Intro</span>
               </button>
             )}

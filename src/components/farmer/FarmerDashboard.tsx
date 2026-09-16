@@ -5,7 +5,7 @@ import {
   Sparkles, 
   CheckCircle2
 } from 'lucide-react';
-import { FarmerTab, HarvestItem, HarvestStatus, OrderDeliveryItem, OrderStatus, TransactionItem, ActivityItem, HarvestFormData, CropCategory, HarvestUnit, MarketPriceItem, InterestRequest, SharedNotificationItem, NotificationPreferences, SupportRequestItem, SupportCategory, RoleType } from '@/types';
+import { FarmerTab, HarvestItem, HarvestStatus, OrderDeliveryItem, OrderStatus, TransactionItem, ActivityItem, HarvestFormData, CropCategory, HarvestUnit, MarketPriceItem, InterestRequest, SharedNotificationItem, NotificationPreferences, SupportRequestItem, SupportCategory, RoleType } from '../../types';
 import { FarmerHeader } from './FarmerHeader';
 import { FarmerNavigation } from './FarmerNavigation';
 import { AddHarvestPage } from './harvest/AddHarvestPage';
@@ -26,19 +26,19 @@ import { FarmLinkAIChatPanel } from './chatbot/FarmLinkAIChatPanel';
 import { AskFarmLinkAISection } from './chatbot/AskFarmLinkAISection';
 import { FloatingChatbotButton } from './chatbot/FloatingChatbotButton';
 import { Footer } from '../common/Footer';
-import { COMPREHENSIVE_MARKET_PRICES } from '@/data/marketPriceData';
-import { INITIAL_INTEREST_REQUESTS } from '@/data/buyerData';
-import { INITIAL_ORDERS, generateTrackingSteps } from '@/data/orderData';
-import { INITIAL_TRANSACTIONS } from '@/data/paymentData';
+import { COMPREHENSIVE_MARKET_PRICES } from '../../data/marketPriceData';
+import { INITIAL_INTEREST_REQUESTS } from '../../data/buyerData';
+import { INITIAL_ORDERS, generateTrackingSteps } from '../../data/orderData';
+import { INITIAL_TRANSACTIONS } from '../../data/paymentData';
 import { 
   INITIAL_HARVESTS, 
   INITIAL_ACTIVITIES
-} from '@/data/farmerDemoData';
+} from '../../data/farmerDemoData';
 import {
   initialSharedNotifications,
   defaultNotificationPreferences,
   initialSupportRequests
-} from '@/data/supportAndFaqData';
+} from '../../data/supportAndFaqData';
 
 interface FarmerDashboardProps {
   onLogout: () => void;

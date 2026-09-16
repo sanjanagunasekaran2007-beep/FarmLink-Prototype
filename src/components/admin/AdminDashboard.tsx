@@ -14,7 +14,7 @@ import {
   SupportRequestItem, 
   RoleType, 
   SupportCategory 
-} from '@/types';
+} from '../../types';
 import { 
   initialAdminMetrics, 
   initialAdminUsers, 
@@ -22,12 +22,12 @@ import {
   initialAdminOrders, 
   initialAdminActivities, 
   initialAdminReports 
-} from '@/data/adminDemoData';
+} from '../../data/adminDemoData';
 import { 
   initialSharedNotifications, 
   defaultNotificationPreferences, 
   initialSupportRequests 
-} from '@/data/supportAndFaqData';
+} from '../../data/supportAndFaqData';
 
 import { AdminHeader } from './AdminHeader';
 import { AdminNavigation } from './AdminNavigation';
@@ -39,10 +39,10 @@ import { AdminActivityView } from './tabs/AdminActivityView';
 import { AdminReportsView } from './tabs/AdminReportsView';
 import { AdminSettingsView } from './tabs/AdminSettingsView';
 
-import { SharedNotificationPanel } from '@/components/common/notifications/SharedNotificationPanel';
-import { NotificationPreferencesModal } from '@/components/common/notifications/NotificationPreferencesModal';
-import { SharedHelpCenterModal } from '@/components/common/help/SharedHelpCenterModal';
-import { Footer } from '@/components/common/Footer';
+import { SharedNotificationPanel } from '../common/notifications/SharedNotificationPanel';
+import { NotificationPreferencesModal } from '../common/notifications/NotificationPreferencesModal';
+import { SharedHelpCenterModal } from '../common/help/SharedHelpCenterModal';
+import { Footer } from '../common/Footer';
 
 interface AdminDashboardProps {
   onLogout: () => void;

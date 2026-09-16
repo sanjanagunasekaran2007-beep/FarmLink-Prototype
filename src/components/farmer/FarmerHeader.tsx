@@ -35,29 +35,29 @@ export const FarmerHeader = ({
 
   return (
     <>
-      <header className="w-full bg-[#24352D] dark:bg-[#1D2C25] text-[#F5F1E8] border-b border-[#3B4C41] px-4 sm:px-8 py-3.5 sticky top-0 z-30 select-none shadow-card transition-colors">
+      <header className="w-full bg-farm-navigation text-farm-navigation-text border-b border-farm-border px-4 sm:px-8 py-3.5 sticky top-0 z-30 select-none shadow-card transition-colors">
         <div className="max-w-7xl mx-auto flex items-center justify-between gap-3">
           {/* Left: Brand Emblem & Farmer Greeting */}
           <div className="flex items-center gap-3">
-            <div className="w-10 h-10 rounded-2xl bg-farm-terracotta flex items-center justify-center text-white shadow-subtle shrink-0 border border-farm-gold/40">
+            <div className="w-10 h-10 rounded-2xl bg-farm-harvest flex items-center justify-center text-white shadow-subtle shrink-0 border border-farm-market/40">
               <Sprout className="w-5 h-5 text-white" strokeWidth={2.4} />
             </div>
 
             <div className="flex flex-col">
               <div className="flex items-center gap-2">
-                <h2 className="font-display font-bold text-base sm:text-lg text-[#F5F1E8] leading-tight">
+                <h2 className="font-display font-bold text-base sm:text-lg text-farm-navigation-text leading-tight">
                   {getGreeting()}, {farmerName.split(' ')[0]}
                 </h2>
-                <span className="hidden md:inline-flex items-center px-2 py-0.5 rounded-full bg-[#1A2922] dark:bg-[#2B3D33] text-farm-terracotta text-[10px] font-bold uppercase border border-farm-terracotta/40">
+                <span className="hidden md:inline-flex items-center px-2 py-0.5 rounded-full bg-farm-navigation-text/10 text-farm-harvest text-[10px] font-bold uppercase border border-farm-harvest/40">
                   Producer Portal
                 </span>
               </div>
 
-              <div className="flex items-center gap-1.5 text-xs text-[#C0C9BF] font-medium mt-0.5">
-                <MapPin className="w-3.5 h-3.5 text-farm-gold" />
+              <div className="flex items-center gap-1.5 text-xs text-farm-navigation-text/80 font-medium mt-0.5">
+                <MapPin className="w-3.5 h-3.5 text-farm-market" />
                 <span className="truncate max-w-[140px] sm:max-w-none">{location}</span>
-                <span className="text-[#91A095] hidden sm:inline">&bull;</span>
-                <span className="text-[11px] text-[#91A095] hidden sm:inline">
+                <span className="text-farm-navigation-text/40 hidden sm:inline">&bull;</span>
+                <span className="text-[11px] text-farm-navigation-text/60 hidden sm:inline">
                   {t('farmer.dashboardTitle', 'Farmer Marketplace')}
                 </span>
               </div>
@@ -67,17 +67,17 @@ export const FarmerHeader = ({
           {/* Right: Theme, Language, Accessibility, Notification Alerts, Profile & Logout */}
           <div className="flex items-center gap-2 sm:gap-3">
             {/* Theme Toggle */}
-            <ThemeSwitcher size="md" className="bg-[#1A2922] dark:bg-[#2B3D33] border-[#3B4C41] text-[#F5F1E8]" />
+            <ThemeSwitcher size="md" className="bg-farm-navigation-text/10 border-farm-border text-farm-navigation-text" />
 
             {/* Language Selector Button */}
             <button
               type="button"
               onClick={() => setIsLangModalOpen(true)}
-              className="h-10 px-2.5 sm:px-3 rounded-xl bg-[#1A2922] dark:bg-[#2B3D33] border border-[#3B4C41] flex items-center gap-1.5 text-xs font-bold text-[#F5F1E8] hover:bg-[#2B3D33] active:scale-95 transition-all shadow-subtle cursor-pointer"
+              className="h-10 px-2.5 sm:px-3 rounded-xl bg-farm-navigation-text/10 border border-farm-border flex items-center gap-1.5 text-xs font-bold text-farm-navigation-text hover:bg-farm-navigation-text/20 active:scale-95 transition-all shadow-subtle cursor-pointer"
               title="Change Language / மொழி மாற்றுக"
               id="farmer-lang-btn"
             >
-              <Globe className="w-3.5 h-3.5 text-farm-gold" />
+              <Globe className="w-4 h-4 text-farm-market" />
               <span className="font-semibold text-[11px] sm:text-xs">{currentLanguageMeta.native}</span>
             </button>
 
@@ -85,24 +85,24 @@ export const FarmerHeader = ({
             <button
               type="button"
               onClick={() => setIsAccessModalOpen(true)}
-              className="w-10 h-10 rounded-xl bg-[#1A2922] dark:bg-[#2B3D33] border border-[#3B4C41] flex items-center justify-center text-[#F5F1E8] hover:bg-[#2B3D33] active:scale-95 transition-all shadow-subtle cursor-pointer"
+              className="w-10 h-10 rounded-xl bg-farm-navigation-text/10 border border-farm-border flex items-center justify-center text-farm-navigation-text hover:bg-farm-navigation-text/20 active:scale-95 transition-all shadow-subtle cursor-pointer"
               title="Accessibility Settings / ಸುಲಭ ಪ್ರವೇಶ"
               id="farmer-access-btn"
             >
-              <Sliders className="w-4 h-4 text-farm-gold" />
+              <Sliders className="w-4 h-4 text-farm-market" />
             </button>
 
             {/* Notifications Bell */}
             <button
               type="button"
               onClick={onOpenNotifications}
-              className="w-10 h-10 rounded-xl bg-[#1A2922] dark:bg-[#2B3D33] border border-[#3B4C41] flex items-center justify-center text-[#F5F1E8] hover:bg-[#2B3D33] active:scale-95 transition-all relative shadow-subtle cursor-pointer"
+              className="w-10 h-10 rounded-xl bg-farm-navigation-text/10 border border-farm-border flex items-center justify-center text-farm-navigation-text hover:bg-farm-navigation-text/20 active:scale-95 transition-all relative shadow-subtle cursor-pointer"
               aria-label="Open notifications"
               id="farmer-notif-btn"
             >
-              <Bell className="w-4 h-4 text-[#F5F1E8]" />
+              <Bell className="w-4 h-4 text-farm-navigation-text" />
               {unreadCount > 0 && (
-                <span className="absolute -top-1 -right-1 w-4 h-4 rounded-full bg-farm-terracotta text-white text-[9px] font-bold flex items-center justify-center border border-[#24352D]">
+                <span className="absolute -top-1 -right-1 w-4 h-4 rounded-full bg-farm-harvest text-white text-[9px] font-bold flex items-center justify-center border border-farm-navigation">
                   {unreadCount}
                 </span>
               )}
@@ -112,11 +112,11 @@ export const FarmerHeader = ({
             <button
               type="button"
               onClick={onOpenProfile}
-              className="hidden sm:inline-flex items-center gap-1.5 h-10 px-3 rounded-xl bg-[#1A2922] dark:bg-[#2B3D33] border border-[#3B4C41] text-xs font-bold text-[#F5F1E8] hover:bg-[#2B3D33] active:scale-95 transition-all shadow-subtle cursor-pointer"
+              className="hidden sm:inline-flex items-center gap-1.5 h-10 px-3 rounded-xl bg-farm-navigation-text/10 border border-farm-border text-xs font-bold text-farm-navigation-text hover:bg-farm-navigation-text/20 active:scale-95 transition-all shadow-subtle cursor-pointer"
               title="View Farmer Profile"
               id="farmer-profile-btn"
             >
-              <User className="w-3.5 h-3.5 text-farm-gold" />
+              <User className="w-3.5 h-3.5 text-farm-market" />
               <span>Profile</span>
             </button>
 

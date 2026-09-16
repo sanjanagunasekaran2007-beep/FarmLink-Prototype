@@ -9,132 +9,188 @@
 
 :root,
 [data-theme="light"] {
-  /* Surfaces & Backgrounds */
-  --bg-base: #F5F1E8;
-  --bg-surface: #FFFFFF;
-  --bg-surface-secondary: #EEE9DE;
-  --bg-surface-elevated: #FBF9F3;
-  --bg-surface-muted: #EEE9DE;
+  /* Exact Specified Forest Night Light Tokens */
+  --color-background: #F5F1E8;
+  --color-surface: #FFFFFF;
+  --color-surface-secondary: #EEE9DE;
+  --color-surface-elevated: #FBF9F3;
+
+  --color-text-primary: #24352D;
+  --color-text-secondary: #657067;
+  --color-text-muted: #8A9189;
+
+  --color-navigation: #24352D;
+  --color-navigation-text: #F5F1E8;
+
+  --color-primary: #24352D;
+  --color-primary-hover: #1A2922;
+
+  --color-harvest: #B96E4B;
+  --color-harvest-soft: #F1DED4;
+
+  --color-market: #B8A05A;
+  --color-market-soft: #F1E8CF;
+
+  --color-support: #789B87;
+  --color-support-soft: #DFE9E1;
+
+  --color-logistics: #64899A;
+  --color-logistics-soft: #DCE8ED;
+
+  --color-success: #4F805D;
+  --color-warning: #AD812E;
+  --color-danger: #B85B55;
+
+  --color-border: #D9D8CF;
+  --color-border-strong: #B8B9AE;
+
+  /* Framework Compatibility Aliases */
+  --bg-base: var(--color-background);
+  --bg-surface: var(--color-surface);
+  --bg-surface-secondary: var(--color-surface-secondary);
+  --bg-surface-elevated: var(--color-surface-elevated);
+  --bg-surface-muted: var(--color-surface-secondary);
   --bg-surface-hover: #E4DED1;
-  
-  /* Typography */
-  --text-primary: #24352D;
-  --text-secondary: #657067;
-  --text-muted: #8A9189;
-  
-  /* Borders */
-  --border-subtle: #D9D8CF;
-  --border-strong: #B8B9AE;
-  
-  /* Primary Brand (Forest) */
-  --brand-primary: #24352D;
-  --brand-primary-hover: #1A2922;
+
+  --text-primary: var(--color-text-primary);
+  --text-secondary: var(--color-text-secondary);
+  --text-muted: var(--color-text-muted);
+
+  --border-subtle: var(--color-border);
+  --border-strong: var(--color-border-strong);
+
+  --brand-primary: var(--color-primary);
+  --brand-primary-hover: var(--color-primary-hover);
   --brand-soft: #E0E9DF;
-  
-  /* Role Accents */
-  --farmer-accent: #B96E4B;
-  --farmer-surface: #F1DED4;
-  --buyer-accent: #789B87;
-  --buyer-surface: #DFE9E1;
-  --logistics-accent: #B8A05A;
-  --logistics-surface: #F1E8CF;
+
+  --farmer-accent: var(--color-harvest);
+  --farmer-surface: var(--color-harvest-soft);
+  --buyer-accent: var(--color-support);
+  --buyer-surface: var(--color-support-soft);
+  --logistics-accent: var(--color-logistics);
+  --logistics-surface: var(--color-logistics-soft);
   --admin-accent: #64899A;
   --admin-surface: #E1EBEF;
-  
-  /* Semantic Accents */
-  --terracotta: #B96E4B;
-  --terracotta-soft: #F1DED4;
-  --antique-gold: #B8A05A;
-  --antique-gold-soft: #F1E8CF;
-  --eucalyptus: #789B87;
-  --eucalyptus-soft: #DFE9E1;
-  --info-blue: #64899A;
-  --info-blue-soft: #E1EBEF;
-  
-  /* Semantic Feedback Status */
-  --success: #4F805D;
+
+  --terracotta: var(--color-harvest);
+  --terracotta-soft: var(--color-harvest-soft);
+  --antique-gold: var(--color-market);
+  --antique-gold-soft: var(--color-market-soft);
+  --eucalyptus: var(--color-support);
+  --eucalyptus-soft: var(--color-support-soft);
+  --info-blue: var(--color-logistics);
+  --info-blue-soft: var(--color-logistics-soft);
+
+  --success: var(--color-success);
   --success-soft: #DFE9E1;
-  --warning: #AD812E;
+  --warning: var(--color-warning);
   --warning-soft: #F1E8CF;
-  --danger: #B85B55;
+  --danger: var(--color-danger);
   --danger-soft: #F8E5E4;
-  --info: #64899A;
-  --info-soft: #E1EBEF;
-  
-  /* Aliases for components */
-  --gold-accent: #B8A05A;
-  --gold-surface: #F1E8CF;
-  --teal-accent: #789B87;
-  --teal-surface: #DFE9E1;
-  --info-accent: #64899A;
-  --info-surface: #E1EBEF;
-  
+  --info: var(--color-logistics);
+  --info-soft: var(--color-logistics-soft);
+
+  --gold-accent: var(--color-market);
+  --gold-surface: var(--color-market-soft);
+  --teal-accent: var(--color-support);
+  --teal-surface: var(--color-support-soft);
+  --info-accent: var(--color-logistics);
+  --info-surface: var(--color-logistics-soft);
+
   --focus-ring: rgba(36, 53, 45, 0.25);
   --overlay: rgba(36, 53, 45, 0.65);
 }
 
 [data-theme="dark"],
 .dark {
-  /* Surfaces & Backgrounds */
-  --bg-base: #16221D;
-  --bg-surface: #1D2C25;
-  --bg-surface-secondary: #24352D;
-  --bg-surface-elevated: #2B3D33;
-  --bg-surface-muted: #24352D;
+  /* Exact Specified Forest Night Dark Tokens */
+  --color-background: #16221D;
+  --color-surface: #1D2C25;
+  --color-surface-secondary: #24352D;
+  --color-surface-elevated: #2B3D33;
+
+  --color-text-primary: #F5F1E8;
+  --color-text-secondary: #C0C9BF;
+  --color-text-muted: #91A095;
+
+  --color-navigation: #111A16;
+  --color-navigation-text: #F5F1E8;
+
+  --color-primary: #789B87;
+  --color-primary-hover: #96B8A1;
+
+  --color-harvest: #C98565;
+  --color-harvest-soft: #49342C;
+
+  --color-market: #CBB477;
+  --color-market-soft: #494128;
+
+  --color-support: #9DBDA6;
+  --color-support-soft: #2D4437;
+
+  --color-logistics: #8BAFBE;
+  --color-logistics-soft: #293F48;
+
+  --color-success: #91C39B;
+  --color-warning: #D2B66C;
+  --color-danger: #E28A84;
+
+  --color-border: #3B4C41;
+  --color-border-strong: #526558;
+
+  /* Framework Compatibility Aliases */
+  --bg-base: var(--color-background);
+  --bg-surface: var(--color-surface);
+  --bg-surface-secondary: var(--color-surface-secondary);
+  --bg-surface-elevated: var(--color-surface-elevated);
+  --bg-surface-muted: var(--color-surface-secondary);
   --bg-surface-hover: #2D4036;
-  
-  /* Typography */
-  --text-primary: #F5F1E8;
-  --text-secondary: #C0C9BF;
-  --text-muted: #91A095;
-  
-  /* Borders */
-  --border-subtle: #3B4C41;
-  --border-strong: #526558;
-  
-  /* Primary Brand (Forest Night) */
-  --brand-primary: #789B87;
-  --brand-primary-hover: #96B8A1;
+
+  --text-primary: var(--color-text-primary);
+  --text-secondary: var(--color-text-secondary);
+  --text-muted: var(--color-text-muted);
+
+  --border-subtle: var(--color-border);
+  --border-strong: var(--color-border-strong);
+
+  --brand-primary: var(--color-primary);
+  --brand-primary-hover: var(--color-primary-hover);
   --brand-soft: #2B4538;
-  
-  /* Role Accents */
-  --farmer-accent: #C98565;
-  --farmer-surface: #49342C;
-  --buyer-accent: #9DBDA6;
-  --buyer-surface: #2D4437;
-  --logistics-accent: #CBB477;
-  --logistics-surface: #494128;
+
+  --farmer-accent: var(--color-harvest);
+  --farmer-surface: var(--color-harvest-soft);
+  --buyer-accent: var(--color-support);
+  --buyer-surface: var(--color-support-soft);
+  --logistics-accent: var(--color-logistics);
+  --logistics-surface: var(--color-logistics-soft);
   --admin-accent: #8BAFBE;
   --admin-surface: #2B4148;
-  
-  /* Semantic Accents */
-  --terracotta: #C98565;
-  --terracotta-soft: #49342C;
-  --antique-gold: #CBB477;
-  --antique-gold-soft: #494128;
-  --eucalyptus: #9DBDA6;
-  --eucalyptus-soft: #2D4437;
-  --info-blue: #8BAFBE;
-  --info-blue-soft: #2B4148;
-  
-  /* Semantic Feedback Status */
-  --success: #91C39B;
+
+  --terracotta: var(--color-harvest);
+  --terracotta-soft: var(--color-harvest-soft);
+  --antique-gold: var(--color-market);
+  --antique-gold-soft: var(--color-market-soft);
+  --eucalyptus: var(--color-support);
+  --eucalyptus-soft: var(--color-support-soft);
+  --info-blue: var(--color-logistics);
+  --info-blue-soft: var(--color-logistics-soft);
+
+  --success: var(--color-success);
   --success-soft: #2B4538;
-  --warning: #D2B66C;
+  --warning: var(--color-warning);
   --warning-soft: #494128;
-  --danger: #E28A84;
+  --danger: var(--color-danger);
   --danger-soft: #482B29;
-  --info: #8BAFBE;
-  --info-soft: #2B4148;
-  
-  /* Aliases for components */
-  --gold-accent: #CBB477;
-  --gold-surface: #494128;
-  --teal-accent: #9DBDA6;
-  --teal-surface: #2D4437;
-  --info-accent: #8BAFBE;
-  --info-surface: #2B4148;
-  
+  --info: var(--color-logistics);
+  --info-soft: var(--color-logistics-soft);
+
+  --gold-accent: var(--color-market);
+  --gold-surface: var(--color-market-soft);
+  --teal-accent: var(--color-support);
+  --teal-surface: var(--color-support-soft);
+  --info-accent: var(--color-logistics);
+  --info-surface: var(--color-logistics-soft);
+
   --focus-ring: rgba(120, 155, 135, 0.35);
   --overlay: rgba(0, 0, 0, 0.8);
 }
