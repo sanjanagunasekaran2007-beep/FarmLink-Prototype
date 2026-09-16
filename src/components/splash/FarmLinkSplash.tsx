@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Sprout, Sparkles, ArrowRight } from 'lucide-react';
-import { useAccessibility } from '@/context/AccessibilityContext';
+import { useAccessibility } from '../../context/AccessibilityContext';
 
 interface FarmLinkSplashProps {
   onComplete: () => void;
@@ -430,3 +430,5 @@ export const FarmLinkSplash = ({ onComplete }: FarmLinkSplashProps) => {
     </div>
   );
 };
+
+export default FarmLinkSplash;

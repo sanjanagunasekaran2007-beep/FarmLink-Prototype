@@ -9,45 +9,46 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap');
 
-:root {
-  /* --- Core Palette (Exact Specified Hex Tokens) --- */
-  --primary-forest: #1F5135;
-  --primary-green: #4F8F5B;
-  --primary-green-hover: #3E7448;
-  --fresh-leaf: #73A96B;
-  --harvest-gold: #D9A441;
-  --harvest-gold-hover: #C59232;
-  --warm-amber: #E8A23A;
-  --market-blue: #4F8FA8;
-  --ai-lavender: #7C6FA6;
-  --warm-cream: #FAF7EF;
-  --soft-sage: #DCEBDD;
-  --soft-green-surface: #EEF5EC;
+:root,
+[data-theme="light"] {
+  /* --- Core Forest Night Palette --- */
+  --primary-forest: #24352D;
+  --primary-green: #4F805D;
+  --primary-green-hover: #1A2922;
+  --fresh-leaf: #789B87;
+  --harvest-gold: #B8A05A;
+  --harvest-gold-hover: #A38C48;
+  --warm-amber: #B96E4B;
+  --market-blue: #64899A;
+  --ai-lavender: #789B87;
+  --warm-cream: #F5F1E8;
+  --soft-sage: #DFE9E1;
+  --soft-green-surface: #FBF9F3;
   
-  --text-main: #24332A;
-  --text-secondary: #657168;
-  --text-muted: #849187;
+  --text-main: #24352D;
+  --text-secondary: #657067;
+  --text-muted: #8A9189;
   --text-inverse: #FFFFFF;
   
-  --border-color: #D9E1D8;
-  --border-light: #E7EDE6;
-  --border-medium: #CAD5C9;
-  --border-dark: #AEC0AC;
+  --border-color: #D9D8CF;
+  --border-light: #EEE9DE;
+  --border-medium: #D9D8CF;
+  --border-dark: #B8B9AE;
   
-  /* --- Semantic Backgrounds (60% Neutral/Cream, 25% Green, 10% Gold/Amber, 5% Blue/Lavender) --- */
-  --bg-app: #FAF7EF;
-  --bg-sidebar: #FAF7EF;
-  --bg-header: rgba(250, 247, 239, 0.94);
+  /* --- Semantic Backgrounds (Forest Night Light) --- */
+  --bg-app: #F5F1E8;
+  --bg-sidebar: #F5F1E8;
+  --bg-header: #24352D;
   --bg-card: #FFFFFF;
-  --bg-card-subtle: #EEF5EC;
+  --bg-card-subtle: #EEE9DE;
   --bg-input: #FFFFFF;
   --bg-modal: #FFFFFF;
-  --bg-drawer: #FAF7EF;
+  --bg-drawer: #F5F1E8;
 
   /* --- Status & Intent Tints --- */
-  --status-accepted-bg: #EEF5EC;
-  --status-accepted-border: #CBE2C8;
-  --status-accepted-text: #1F5135;
+  --status-accepted-bg: #DFE9E1;
+  --status-accepted-border: #D9D8CF;
+  --status-accepted-text: #24352D;
 
   --status-countered-bg: #FEF6E8;
   --status-countered-border: #F7DFB3;
@@ -61,9 +62,9 @@
   --status-rejected-border: #F9D0CA;
   --status-rejected-text: #A82E20;
 
-  --status-ai-bg: #F3F1F9;
-  --status-ai-border: #DAD4EC;
-  --status-ai-text: #50447A;
+  --status-ai-bg: #DFE9E1;
+  --status-ai-border: #D9D8CF;
+  --status-ai-text: #24352D;
 
   /* --- Crop Identity Systems --- */
   --crop-tomato-bg: #FFF1EF;

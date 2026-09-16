@@ -1,16 +1,16 @@
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { AppView, RoleType } from '@/types';
-import { FarmLinkSplash } from '@/components/splash/FarmLinkSplash';
-import { RoleSelection } from '@/components/roles/RoleSelection';
-import { RoleTransition } from '@/components/roles/RoleTransition';
-import { RoleLoginScreen } from '@/components/auth/RoleLoginScreen';
-import { FarmerDashboard } from '@/components/farmer/FarmerDashboard';
-import { BuyerDashboard } from '@/components/buyer/BuyerDashboard';
-import { LogisticsDashboard } from '@/components/logistics/LogisticsDashboard';
-import { AdminDashboard } from '@/components/admin/AdminDashboard';
-import { Header } from '@/components/common/Header';
-import { Footer } from '@/components/common/Footer';
+import { AppView, RoleType } from './types';
+import { FarmLinkSplash } from './components/splash/FarmLinkSplash';
+import { RoleSelection } from './components/roles/RoleSelection';
+import { RoleTransition } from './components/roles/RoleTransition';
+import { RoleLoginScreen } from './components/auth/RoleLoginScreen';
+import { FarmerDashboard } from './components/farmer/FarmerDashboard';
+import { BuyerDashboard } from './components/buyer/BuyerDashboard';
+import { LogisticsDashboard } from './components/logistics/LogisticsDashboard';
+import { AdminDashboard } from './components/admin/AdminDashboard';
+import { Header } from './components/common/Header';
+import { Footer } from './components/common/Footer';
 
 export function App() {
   const [view, setView] = useState<AppView>('splash');

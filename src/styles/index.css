@@ -146,7 +146,7 @@
     box-sizing: border-box;
   }
   
-  html, body {
+  html, body, #root {
     background-color: var(--bg-base);
     color: var(--text-primary);
     font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
@@ -239,8 +239,8 @@
 @layer components {
   /* Solid Theme Buttons */
   .btn-farm-primary {
-    background-color: var(--brand-primary);
-    color: var(--bg-surface);
+    background-color: var(--farmer-accent);
+    color: #FFFFFF;
     font-weight: 600;
     border-radius: 0.75rem;
     padding: 0.625rem 1.25rem;
@@ -248,7 +248,7 @@
     border: 1px solid transparent;
   }
   .btn-farm-primary:hover {
-    background-color: var(--brand-primary-hover);
+    opacity: 0.92;
   }
   .btn-farm-primary:active {
     transform: scale(0.98);
