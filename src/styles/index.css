@@ -1,0 +1,314 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ==========================================================================
+   FARMLINK — FOREST NIGHT DESIGN SYSTEM TOKENS
+   Strict adherence to solid colors only (Zero Gradients)
+   ========================================================================== */
+
+:root,
+[data-theme="light"] {
+  /* Surfaces & Backgrounds */
+  --bg-base: #F5F1E8;
+  --bg-surface: #FFFFFF;
+  --bg-surface-secondary: #EEE9DE;
+  --bg-surface-elevated: #FBF9F3;
+  --bg-surface-muted: #EEE9DE;
+  --bg-surface-hover: #E4DED1;
+  
+  /* Typography */
+  --text-primary: #24352D;
+  --text-secondary: #657067;
+  --text-muted: #8A9189;
+  
+  /* Borders */
+  --border-subtle: #D9D8CF;
+  --border-strong: #B8B9AE;
+  
+  /* Primary Brand (Forest) */
+  --brand-primary: #24352D;
+  --brand-primary-hover: #1A2922;
+  --brand-soft: #E0E9DF;
+  
+  /* Role Accents */
+  --farmer-accent: #B96E4B;
+  --farmer-surface: #F1DED4;
+  --buyer-accent: #789B87;
+  --buyer-surface: #DFE9E1;
+  --logistics-accent: #B8A05A;
+  --logistics-surface: #F1E8CF;
+  --admin-accent: #64899A;
+  --admin-surface: #E1EBEF;
+  
+  /* Semantic Accents */
+  --terracotta: #B96E4B;
+  --terracotta-soft: #F1DED4;
+  --antique-gold: #B8A05A;
+  --antique-gold-soft: #F1E8CF;
+  --eucalyptus: #789B87;
+  --eucalyptus-soft: #DFE9E1;
+  --info-blue: #64899A;
+  --info-blue-soft: #E1EBEF;
+  
+  /* Semantic Feedback Status */
+  --success: #4F805D;
+  --success-soft: #DFE9E1;
+  --warning: #AD812E;
+  --warning-soft: #F1E8CF;
+  --danger: #B85B55;
+  --danger-soft: #F8E5E4;
+  --info: #64899A;
+  --info-soft: #E1EBEF;
+  
+  /* Aliases for components */
+  --gold-accent: #B8A05A;
+  --gold-surface: #F1E8CF;
+  --teal-accent: #789B87;
+  --teal-surface: #DFE9E1;
+  --info-accent: #64899A;
+  --info-surface: #E1EBEF;
+  
+  --focus-ring: rgba(36, 53, 45, 0.25);
+  --overlay: rgba(36, 53, 45, 0.65);
+}
+
+[data-theme="dark"],
+.dark {
+  /* Surfaces & Backgrounds */
+  --bg-base: #16221D;
+  --bg-surface: #1D2C25;
+  --bg-surface-secondary: #24352D;
+  --bg-surface-elevated: #2B3D33;
+  --bg-surface-muted: #24352D;
+  --bg-surface-hover: #2D4036;
+  
+  /* Typography */
+  --text-primary: #F5F1E8;
+  --text-secondary: #C0C9BF;
+  --text-muted: #91A095;
+  
+  /* Borders */
+  --border-subtle: #3B4C41;
+  --border-strong: #526558;
+  
+  /* Primary Brand (Forest Night) */
+  --brand-primary: #789B87;
+  --brand-primary-hover: #96B8A1;
+  --brand-soft: #2B4538;
+  
+  /* Role Accents */
+  --farmer-accent: #C98565;
+  --farmer-surface: #49342C;
+  --buyer-accent: #9DBDA6;
+  --buyer-surface: #2D4437;
+  --logistics-accent: #CBB477;
+  --logistics-surface: #494128;
+  --admin-accent: #8BAFBE;
+  --admin-surface: #2B4148;
+  
+  /* Semantic Accents */
+  --terracotta: #C98565;
+  --terracotta-soft: #49342C;
+  --antique-gold: #CBB477;
+  --antique-gold-soft: #494128;
+  --eucalyptus: #9DBDA6;
+  --eucalyptus-soft: #2D4437;
+  --info-blue: #8BAFBE;
+  --info-blue-soft: #2B4148;
+  
+  /* Semantic Feedback Status */
+  --success: #91C39B;
+  --success-soft: #2B4538;
+  --warning: #D2B66C;
+  --warning-soft: #494128;
+  --danger: #E28A84;
+  --danger-soft: #482B29;
+  --info: #8BAFBE;
+  --info-soft: #2B4148;
+  
+  /* Aliases for components */
+  --gold-accent: #CBB477;
+  --gold-surface: #494128;
+  --teal-accent: #9DBDA6;
+  --teal-surface: #2D4437;
+  --info-accent: #8BAFBE;
+  --info-surface: #2B4148;
+  
+  --focus-ring: rgba(120, 155, 135, 0.35);
+  --overlay: rgba(0, 0, 0, 0.8);
+}
+
+@layer base {
+  * {
+    border-color: var(--border-subtle);
+    -webkit-tap-highlight-color: transparent;
+    box-sizing: border-box;
+  }
+  
+  html, body {
+    background-color: var(--bg-base);
+    color: var(--text-primary);
+    font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+    min-height: 100vh;
+    min-height: 100dvh;
+    overflow-x: hidden;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    transition: background-color 0.2s ease, color 0.2s ease;
+  }
+
+  h1, h2, h3, h4, .font-display {
+    font-family: 'Outfit', 'Plus Jakarta Sans', sans-serif;
+    font-weight: 700;
+    color: var(--text-primary);
+    letter-spacing: -0.015em;
+  }
+
+  /* Accessibility Text Size Scales */
+  html[data-text-size="small"] {
+    font-size: 14px;
+  }
+  html[data-text-size="default"] {
+    font-size: 16px;
+  }
+  html[data-text-size="larger"] {
+    font-size: 18px;
+  }
+  html[data-text-size="extra-large"] {
+    font-size: 20px;
+  }
+
+  /* Accessibility High Contrast Overrides */
+  html[data-high-contrast="true"] {
+    --border-subtle: #000000;
+    --border-strong: #000000;
+    --text-primary: #000000;
+    --text-secondary: #111111;
+    --text-muted: #222222;
+  }
+
+  html[data-high-contrast="true"][data-theme="dark"],
+  html[data-high-contrast="true"].dark {
+    --border-subtle: #FFFFFF;
+    --border-strong: #FFFFFF;
+    --text-primary: #FFFFFF;
+    --text-secondary: #EEEEEE;
+    --text-muted: #DDDDDD;
+  }
+
+  /* Accessibility Reduced Motion */
+  html[data-reduced-motion="true"] *,
+  html[data-reduced-motion="true"] *::before,
+  html[data-reduced-motion="true"] *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+
+  /* Accessibility Comfortable Spacing */
+  html[data-comfortable-spacing="true"] body {
+    line-height: 1.75;
+    letter-spacing: 0.02em;
+  }
+
+  /* Custom Scrollbar - Solid theme-aligned */
+  ::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+  ::-webkit-scrollbar-track {
+    background: var(--bg-base);
+  }
+  ::-webkit-scrollbar-thumb {
+    background: var(--border-strong);
+    border-radius: 9999px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: var(--text-muted);
+  }
+
+  /* Focus ring outline */
+  :focus-visible {
+    outline: 2px solid var(--brand-primary);
+    outline-offset: 2px;
+  }
+}
+
+@layer components {
+  /* Solid Theme Buttons */
+  .btn-farm-primary {
+    background-color: var(--brand-primary);
+    color: var(--bg-surface);
+    font-weight: 600;
+    border-radius: 0.75rem;
+    padding: 0.625rem 1.25rem;
+    transition: all 0.15s ease;
+    border: 1px solid transparent;
+  }
+  .btn-farm-primary:hover {
+    background-color: var(--brand-primary-hover);
+  }
+  .btn-farm-primary:active {
+    transform: scale(0.98);
+  }
+
+  .btn-farm-secondary {
+    background-color: var(--bg-surface);
+    color: var(--text-primary);
+    border: 1px solid var(--border-subtle);
+    font-weight: 600;
+    border-radius: 0.75rem;
+    padding: 0.625rem 1.25rem;
+    transition: all 0.15s ease;
+  }
+  .btn-farm-secondary:hover {
+    background-color: var(--bg-surface-hover);
+    border-color: var(--border-strong);
+  }
+  .btn-farm-secondary:active {
+    transform: scale(0.98);
+  }
+
+  /* Solid Theme Input Controls */
+  .input-farm {
+    background-color: var(--bg-surface);
+    color: var(--text-primary);
+    border: 1px solid var(--border-subtle);
+    border-radius: 0.75rem;
+    padding: 0.625rem 1rem;
+    font-size: 0.875rem;
+    transition: border-color 0.15s ease, box-shadow 0.15s ease;
+    width: 100%;
+  }
+  .input-farm:focus {
+    border-color: var(--brand-primary);
+    outline: none;
+    box-shadow: 0 0 0 3px var(--focus-ring);
+  }
+  .input-farm::placeholder {
+    color: var(--text-muted);
+  }
+
+  /* Card Containers */
+  .card-farm {
+    background-color: var(--bg-surface);
+    border: 1px solid var(--border-subtle);
+    border-radius: 1rem;
+    box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.04);
+    transition: border-color 0.15s ease, box-shadow 0.15s ease;
+  }
+
+  .card-farm-elevated {
+    background-color: var(--bg-surface-elevated);
+    border: 1px solid var(--border-subtle);
+    border-radius: 1.25rem;
+    box-shadow: 0 4px 16px 0 rgba(0, 0, 0, 0.08);
+  }
+
+  /* Prevent any gradient usage */
+  .no-gradient {
+    background-image: none !important;
+  }
+}
