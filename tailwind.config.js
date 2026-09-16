@@ -23,6 +23,12 @@ export default {
           border: 'var(--color-border)',
           'border-strong': 'var(--color-border-strong)',
           
+          // Dedicated Brand Logo Tokens
+          'logo-text': 'var(--color-logo-text)',
+          'logo-bg': 'var(--color-logo-bg)',
+          'logo-icon': 'var(--color-logo-icon)',
+          'logo-border': 'var(--color-logo-border)',
+
           // Forest Night Brand & Role Colors
           brand: 'var(--color-primary)',
           'brand-hover': 'var(--color-primary-hover)',

@@ -92,13 +92,13 @@ export const FarmLinkSplash = ({ onComplete }: FarmLinkSplashProps) => {
 
         {/* Official FarmLink Brand Emblem & Logo */}
         <div className="flex flex-col items-center gap-2.5 pt-1">
-          <div className="w-16 h-16 sm:w-20 sm:h-20 rounded-2xl sm:rounded-3xl bg-farm-brand border-2 border-farm-gold flex items-center justify-center text-white shadow-card relative group">
+          <div className="w-16 h-16 sm:w-20 sm:h-20 rounded-2xl sm:rounded-3xl bg-[#24352D] dark:bg-[#1D2C25] border-2 border-farm-gold flex items-center justify-center text-[#F5F1E8] shadow-card relative group">
             {/* Signature Sprout Emblem */}
-            <Sprout className="w-9 h-9 sm:w-11 sm:h-11 text-white" strokeWidth={2.4} />
+            <Sprout className="w-9 h-9 sm:w-11 sm:h-11 text-[#F5F1E8] dark:text-[#91C39B]" strokeWidth={2.4} />
           </div>
 
           <div className="text-center">
-            <h1 className="text-3xl sm:text-4xl lg:text-5xl font-display font-bold text-farm-brand tracking-tight">
+            <h1 className="farmlink-logo-text whitespace-nowrap text-2xl xs:text-3xl sm:text-4xl lg:text-5xl font-display font-bold text-[#24352D] dark:text-[#F5F1E8] tracking-tight">
               FARMLINK
             </h1>
             <p className="text-xs sm:text-sm font-semibold text-farm-text-secondary mt-1">

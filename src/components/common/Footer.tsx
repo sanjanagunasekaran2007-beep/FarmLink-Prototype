@@ -6,7 +6,7 @@ export const Footer = () => {
       <div className="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-3 text-center sm:text-left">
         {/* Left: Network Title */}
         <div className="flex items-center gap-2">
-          <span className="font-display font-bold text-sm tracking-wider text-farm-brand">
+          <span className="farmlink-logo-text whitespace-nowrap font-display font-bold text-sm tracking-wider text-farm-brand">
             FARMLINK
           </span>
           <span className="text-xs text-farm-text-muted hidden sm:inline">&bull;</span>

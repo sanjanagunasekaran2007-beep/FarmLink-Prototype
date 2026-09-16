@@ -2,7 +2,7 @@ import { TranslationSchema } from '../types';
 
 export const hi: TranslationSchema = {
   common: {
-    appName: 'फ़ार्producer लिंक (FARMLINK)',
+    appName: 'फ़ार्मलिंक (FARMLINK)',
     mandiNetwork: 'लाइव मंडी नेटवर्क',
     tagline: 'स्मार्ट कृषि बाज़ार',
     dashboard: 'डैशबोर्ड',

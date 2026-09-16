@@ -44,6 +44,12 @@
   --color-border: #D9D8CF;
   --color-border-strong: #B8B9AE;
 
+  /* Dedicated Brand Logo Tokens */
+  --color-logo-text: #24352D;
+  --color-logo-bg: #24352D;
+  --color-logo-icon: #F5F1E8;
+  --color-logo-border: #B8A05A;
+
   /* Framework Compatibility Aliases */
   --bg-base: var(--color-background);
   --bg-surface: var(--color-surface);
@@ -138,6 +144,12 @@
   --color-border: #3B4C41;
   --color-border-strong: #526558;
 
+  /* Dedicated Brand Logo Tokens */
+  --color-logo-text: #F5F1E8;
+  --color-logo-bg: #1D2C25;
+  --color-logo-icon: #789B87;
+  --color-logo-border: #CBB477;
+
   /* Framework Compatibility Aliases */
   --bg-base: var(--color-background);
   --bg-surface: var(--color-surface);
@@ -222,11 +234,22 @@
     color: var(--text-primary);
     letter-spacing: -0.015em;
     overflow-wrap: break-word;
-    word-break: break-word;
+    word-break: normal;
   }
 
   p, span, label, div {
     overflow-wrap: break-word;
+  }
+
+  /* FarmLink Brand Wordmark - Always strictly on one line & high-contrast in Light/Dark */
+  .brand-wordmark,
+  .farmlink-logo-text {
+    color: var(--color-logo-text) !important;
+    white-space: nowrap !important;
+    word-break: keep-all !important;
+    overflow-wrap: normal !important;
+    hyphens: none !important;
+    display: inline-block;
   }
 
   /* Safe Area Inset Support */
@@ -434,5 +457,14 @@
   /* Prevent any gradient usage */
   .no-gradient {
     background-image: none !important;
+  }
+
+  /* FarmLink Brand Wordmark & Top-Left Logo */
+  .farmlink-logo-text,
+  .brand-wordmark {
+    color: var(--color-logo-text) !important;
+    white-space: nowrap !important;
+    word-break: keep-all !important;
+    overflow-wrap: normal !important;
   }
 }
