@@ -11,16 +11,16 @@ import {
   SupportCategory,
   RoleType,
   FarmerTab
-} from '@/types';
+} from '../../types';
 import { 
   initialLogisticsDeliveries, 
   initialLogisticsProfile
-} from '@/data/logisticsDemoData';
+} from '../../data/logisticsDemoData';
 import {
   initialSharedNotifications,
   defaultNotificationPreferences,
   initialSupportRequests
-} from '@/data/supportAndFaqData';
+} from '../../data/supportAndFaqData';
 import { LogisticsHeader } from './LogisticsHeader';
 import { LogisticsNavigation } from './LogisticsNavigation';
 import { LogisticsDashboardView } from './tabs/LogisticsDashboardView';
@@ -40,7 +40,7 @@ import { SharedHelpCenterModal } from '../common/help/SharedHelpCenterModal';
 import { NotificationPreferencesModal } from '../common/notifications/NotificationPreferencesModal';
 import { FarmLinkAIChatPanel } from '../farmer/chatbot/FarmLinkAIChatPanel';
 import { FloatingChatbotButton } from '../farmer/chatbot/FloatingChatbotButton';
-import { Footer } from '@/components/common/Footer';
+import { Footer } from '../common/Footer';
 import { CheckCircle2, X } from 'lucide-react';
 
 interface LogisticsDashboardProps {

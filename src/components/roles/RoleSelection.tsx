@@ -12,9 +12,9 @@ import {
   MapPin,
   Sparkles
 } from 'lucide-react';
-import { RoleType } from '@/types';
-import { useLanguage } from '@/context/LanguageContext';
-import { useAccessibility } from '@/context/AccessibilityContext';
+import { RoleType } from '../../types';
+import { useLanguage } from '../../context/LanguageContext';
+import { useAccessibility } from '../../context/AccessibilityContext';
 
 interface RoleSelectionProps {
   selectedRole: RoleType | null;

@@ -10,9 +10,9 @@ import {
   RotateCcw,
   Palette
 } from 'lucide-react';
-import { useAccessibility } from '@/context/AccessibilityContext';
-import { useLanguage } from '@/context/LanguageContext';
-import { TextSizeMode } from '@/types';
+import { useAccessibility } from '../../context/AccessibilityContext';
+import { useLanguage } from '../../context/LanguageContext';
+import { TextSizeMode } from '../../types';
 import { ThemeSwitcher } from './ThemeSwitcher';
 
 interface AccessibilitySettingsModalProps {

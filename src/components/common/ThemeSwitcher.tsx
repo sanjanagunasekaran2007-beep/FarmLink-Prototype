@@ -1,5 +1,5 @@
 import { Sun, Moon, Laptop } from 'lucide-react';
-import { useTheme, Theme } from '@/context/ThemeContext';
+import { useTheme, Theme } from '../../context/ThemeContext';
 
 interface ThemeSwitcherProps {
   variant?: 'toggle' | 'segmented' | 'dropdown';

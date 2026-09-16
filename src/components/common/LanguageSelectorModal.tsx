@@ -1,7 +1,7 @@
 import { motion, AnimatePresence } from 'framer-motion';
 import { X, Globe, Check, MapPin } from 'lucide-react';
-import { useLanguage } from '@/context/LanguageContext';
-import { SupportedLanguageCode } from '@/types';
+import { useLanguage } from '../../context/LanguageContext';
+import { SupportedLanguageCode } from '../../types';
 
 interface LanguageSelectorModalProps {
   isOpen: boolean;

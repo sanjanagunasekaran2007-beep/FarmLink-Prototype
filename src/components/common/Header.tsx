@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { Sprout, RotateCcw, Globe, Sliders } from 'lucide-react';
-import { AppView } from '@/types';
-import { useLanguage } from '@/context/LanguageContext';
+import { AppView } from '../../types';
+import { useLanguage } from '../../context/LanguageContext';
 import { ThemeSwitcher } from './ThemeSwitcher';
 import { LanguageSelectorModal } from './LanguageSelectorModal';
 import { AccessibilitySettingsModal } from './AccessibilitySettingsModal';
